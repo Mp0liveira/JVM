@@ -26,9 +26,6 @@ cppcheck:
 	cppcheck --enable=all --std=c99 --language=c --inconclusive --quiet --force \
 		-I$(HDR_DIR) $(SRC_DIR) $(HDR_DIR)
 
-cppcheck_config:
-	cppcheck --std=c99 --language=c --force --check-config -I/usr/include -I$(HDR_DIR) $(SRC_DIR) $(HDR_DIR)
-
 valgrind: $(TARGET)
 	valgrind --leak-check=full --track-origins=yes ./$(TARGET)
 
