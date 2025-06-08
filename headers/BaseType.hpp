@@ -315,3 +315,5 @@ struct AttributeInfo {
         DeprecatedAttribute1 deprecated_info1;
     } info;
 };
+
+#endif
