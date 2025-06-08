@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include <string>
 #include <fstream>
-#include "BasicTypes.h"
+#include "BaseType.h"
 
 using namespace std;
 
