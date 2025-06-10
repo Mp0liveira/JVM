@@ -22,7 +22,7 @@ ClassFile* ClassFileReader::read_class_file(FILE* fp)
     ClassFile* class_file = new ClassFile();
     set_magic(fp, class_file);
     if (check_magic_valid(class_file) == false) {
-        cerr << "Invalid file format!\nThe expected Magic Signature \"0xCAFEBABE\" for the .class file was not found.\n";
+        cerr << "Formato invalido!\nO valor esperado da Assinatura Magica do .class nao foi encontrado.\n";
         delete class_file;
         exit(3);
     }
@@ -30,7 +30,7 @@ ClassFile* ClassFileReader::read_class_file(FILE* fp)
     if (is_version_valid(class_file, 45) == false) {
         double friendlyVersion = ClassFileUtils::non_suported_version(class_file);
         if (friendlyVersion != 0) {
-            cerr << "Versions higher than Java SE 1.8 (52) are not supported. The class file version is Java SE" << friendlyVersion << ".\n";
+            cerr << "Por favor, utilize o Java SE 1.8 e nenhum outro." << friendlyVersion << ".\n";
             delete class_file;
             exit(4);
         }
@@ -158,7 +158,7 @@ void ClassFileReader::set_constant_pool(FILE* fp, ClassFile* class_file) {
             current_entry->info.utf8_info = get_const_utf8_info(fp);
             break;
         default:
-            cerr << "The .class file has an invalid tag in its constant pool.\n";
+            cerr << "O arquivo .class tem uma tag invalida na sua tabela de constantes.\n";
             exit(5);
         }
 
@@ -476,7 +476,7 @@ AttributeInfo ClassFileReader::get_attribute_info(FILE* fp, ClassFile* class_fil
             read_u1(fp);
         }
     } else {
-        cerr << "The .class file has an invalid attribute." << endl;
+        cerr << "O .class tem um atributo invalido" << endl;
         exit(6);
     }
     return result;

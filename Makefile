@@ -11,8 +11,6 @@ SRC_DIR = src
 OBJ_DIR = build
 HDR_DIR = headers
 
-# 4. Nome do executável final (um nome simples, sem caminho)
-TARGET = jvm
 
 # 5. Busca automática por arquivos fonte (.cpp) e cabeçalhos (.hpp)
 SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
