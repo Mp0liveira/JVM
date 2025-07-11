@@ -4,7 +4,7 @@
 CC = g++
 
 # 2. Flags do Compilador C++
-CXXFLAGS = -std=c++17 -Wall -g
+CXXFLAGS = -std=c++11 -Wall -g
 
 # 3. Diretórios do Projeto
 SRC_DIR = src
