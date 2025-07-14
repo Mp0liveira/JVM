@@ -1,7 +1,7 @@
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
-#include "BaseType.hpp" // Usando o nome correto do seu arquivo
+#include "BaseType.hpp" 
 #include "Object.hpp"
 #include <cassert>
 #include <cstdlib>
