@@ -1,7 +1,7 @@
 #ifndef FRAME_HPP
 #define FRAME_HPP
 
-#include "BasicTypes.hpp"
+#include "BaseType.hpp"
 #include "InstanceClass.hpp"
 #include "StaticClass.hpp"
 #include <cassert>

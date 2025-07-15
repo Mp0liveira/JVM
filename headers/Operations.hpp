@@ -2,7 +2,7 @@
 #define OPERATIONS_HPP
 
 #include "Array.hpp"
-#include "BasicTypes.hpp"
+#include "BaseType.hpp"
 #include "ClassFileViewer.hpp"
 #include "Frame.hpp"
 #include "InstanceClass.hpp"
