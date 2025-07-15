@@ -1,0 +1,200 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 46 [1.2]
+	 Constant Pool count: 		 36
+	 Access Flags: 			 0x0021 [public super ]
+	 This Class: 			 ConstantPoolInfo #7 <tableswitch>
+	 Super class: 			 ConstantPoolInfo #8 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 0
+	 Methods pool count: 		 3
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 36)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #8 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #19 <<init>()V>
+
+	 [2] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #20 <java/lang/System>
+ 		 Name and type: 		 ConstantPoolInfo #21 <outLjava/io/PrintStream;>
+
+	 [3] ConstStrInfo
+	 String: 				 ConstantPoolInfo #22 <Ops!>
+
+	 [4] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #23 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #24 <println(Ljava/lang/String;)V>
+
+	 [5] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #7 <tableswitch>
+ 		 Name and type: 		 ConstantPoolInfo #25 <chooseNear(I)I>
+
+	 [6] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #23 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #26 <println(I)V>
+
+	 [7] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #27 <tableswitch>
+
+	 [8] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #28 <java/lang/Object>
+
+	 [9] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 chooseNear
+
+	 [10] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)I
+
+	 [11] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [12] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [13] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [14] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [15] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 main
+
+	 [16] ConstUtf8Info
+		 Length of byte array: 		 22
+		 Length of string: 		 22
+		 String: 			 ([Ljava/lang/String;)V
+
+	 [17] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [18] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 tableswitch.java
+
+	 [19] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #13 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #14 <()V>
+
+	 [20] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #29 <java/lang/System>
+
+	 [21] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #30 <out>
+		 Descriptor: 			 ConstantPoolInfo #31 <Ljava/io/PrintStream;>
+
+	 [22] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Ops!
+
+	 [23] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #32 <java/io/PrintStream>
+
+	 [24] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #33 <println>
+		 Descriptor: 			 ConstantPoolInfo #34 <(Ljava/lang/String;)V>
+
+	 [25] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #9 <chooseNear>
+		 Descriptor: 			 ConstantPoolInfo #10 <(I)I>
+
+	 [26] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #33 <println>
+		 Descriptor: 			 ConstantPoolInfo #35 <(I)V>
+
+	 [27] ConstUtf8Info
+		 Length of byte array: 		 11
+		 Length of string: 		 11
+		 String: 			 tableswitch
+
+	 [28] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [29] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/System
+
+	 [30] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 out
+
+	 [31] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 Ljava/io/PrintStream;
+
+	 [32] ConstUtf8Info
+		 Length of byte array: 		 19
+		 Length of string: 		 19
+		 String: 			 java/io/PrintStream
+
+	 [33] ConstUtf8Info
+		 Length of byte array: 		 7
+		 Length of string: 		 7
+		 String: 			 println
+
+	 [34] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 (Ljava/lang/String;)V
+
+	 [35] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)V
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 0)
+{
+}
+
+Methods (Member count: 3)
+{
+	[0] chooseNear
+	{
+		Name: 		 ConstantPoolInfo #9 <chooseNear>
+		Descriptor: 	 ConstantPoolInfo #10 <(I)I>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #11
+				Attribute length:	 76
+				Maximum stack depth:	 1
+				Maximum local variables: 1
+				Code length:		 36
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	iload_0
+					2	1	tableswitchInvalid instruction opcode.

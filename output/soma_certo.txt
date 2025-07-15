@@ -1,0 +1,168 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 52 [8.0]
+	 Constant Pool count: 		 17
+	 Access Flags: 			 0x0020 [super ]
+	 This Class: 			 ConstantPoolInfo #2 <soma_certo>
+	 Super class: 			 ConstantPoolInfo #3 <java/lang/Object>
+	 Interfaces count: 		 1
+	 Fields count: 			 0
+	 Methods pool count: 		 2
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 17)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #3 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #13 <<init>()V>
+
+	 [2] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #14 <soma_certo>
+
+	 [3] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #15 <java/lang/Object>
+
+	 [4] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #16 <Somar>
+
+	 [5] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [6] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [7] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [8] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [9] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 somar
+
+	 [10] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 (II)I
+
+	 [11] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [12] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 soma_certo.java
+
+	 [13] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #5 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #6 <()V>
+
+	 [14] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 soma_certo
+
+	 [15] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [16] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 Somar
+
+}
+
+Interfaces (Member count: 1) 
+{
+	 Interface 0 
+		 Interface: 		 ConstantPoolInfo #4 <Somar>
+ }
+
+Fields (Member count: 0)
+{
+}
+
+Methods (Member count: 2)
+{
+	[0] <init>
+	{
+		Name: 		 ConstantPoolInfo #5 <<init>>
+		Descriptor: 	 ConstantPoolInfo #6 <()V>
+		Access flags: 	 0x0000 []
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #7
+				Attribute length:	 29
+				Maximum stack depth:	 1
+				Maximum local variables: 1
+				Code length:		 5
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	invokespecial #1 <java/lang/Object.<init>>
+					3	4	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #8
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 1
+
+
+	}
+	[1] somar
+	{
+		Name: 		 ConstantPoolInfo #9 <somar>
+		Descriptor: 	 ConstantPoolInfo #10 <(II)I>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #7
+				Attribute length:	 28
+				Maximum stack depth:	 2
+				Maximum local variables: 3
+				Code length:		 4
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	iload_1
+					2	1	iload_2
+					3	2	iadd
+					4	3	ireturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #8
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 3
+
+
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #11
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #12 <soma_certo.java>
+
+}
+

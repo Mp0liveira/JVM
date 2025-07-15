@@ -1,0 +1,598 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 46 [1.2]
+	 Constant Pool count: 		 52
+	 Access Flags: 			 0x0021 [public super ]
+	 This Class: 			 ConstantPoolInfo #12 <Jogador>
+	 Super class: 			 ConstantPoolInfo #13 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 4
+	 Methods pool count: 		 5
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 52)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #13 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #35 <<init>()V>
+
+	 [2] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #12 <Jogador>
+ 		 Name and type: 		 ConstantPoolInfo #36 <nomeLjava/lang/String;>
+
+	 [3] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #12 <Jogador>
+ 		 Name and type: 		 ConstantPoolInfo #37 <cardCounterI>
+
+	 [4] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #38 <Carta>
+
+	 [5] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #12 <Jogador>
+ 		 Name and type: 		 ConstantPoolInfo #39 <cartas[LCarta;>
+
+	 [6] ConstStrInfo
+	 String: 				 ConstantPoolInfo #40 <>
+
+	 [7] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #4 <Carta>
+ 		 Name and type: 		 ConstantPoolInfo #41 <<init>(ILjava/lang/String;I)V>
+
+	 [8] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #12 <Jogador>
+ 		 Name and type: 		 ConstantPoolInfo #42 <pontuacaoI>
+
+	 [9] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #4 <Carta>
+ 		 Name and type: 		 ConstantPoolInfo #43 <naipeI>
+
+	 [10] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #12 <Jogador>
+ 		 Name and type: 		 ConstantPoolInfo #44 <primeiroJogador()LCarta;>
+
+	 [11] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #4 <Carta>
+ 		 Name and type: 		 ConstantPoolInfo #45 <valorI>
+
+	 [12] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #46 <Jogador>
+
+	 [13] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #47 <java/lang/Object>
+
+	 [14] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 nome
+
+	 [15] ConstUtf8Info
+		 Length of byte array: 		 18
+		 Length of string: 		 18
+		 String: 			 Ljava/lang/String;
+
+	 [16] ConstUtf8Info
+		 Length of byte array: 		 9
+		 Length of string: 		 9
+		 String: 			 pontuacao
+
+	 [17] ConstUtf8Info
+		 Length of byte array: 		 1
+		 Length of string: 		 1
+		 String: 			 I
+
+	 [18] ConstUtf8Info
+		 Length of byte array: 		 11
+		 Length of string: 		 11
+		 String: 			 cardCounter
+
+	 [19] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 cartas
+
+	 [20] ConstUtf8Info
+		 Length of byte array: 		 8
+		 Length of string: 		 8
+		 String: 			 [LCarta;
+
+	 [21] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [22] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 (Ljava/lang/String;)V
+
+	 [23] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [24] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [25] ConstUtf8Info
+		 Length of byte array: 		 8
+		 Length of string: 		 8
+		 String: 			 addCarta
+
+	 [26] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 (LCarta;)V
+
+	 [27] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 primeiroJogador
+
+	 [28] ConstUtf8Info
+		 Length of byte array: 		 9
+		 Length of string: 		 9
+		 String: 			 ()LCarta;
+
+	 [29] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 play
+
+	 [30] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 (I)LCarta;
+
+	 [31] ConstUtf8Info
+		 Length of byte array: 		 12
+		 Length of string: 		 12
+		 String: 			 ganheiRodada
+
+	 [32] ConstUtf8Info
+		 Length of byte array: 		 11
+		 Length of string: 		 11
+		 String: 			 ([LCarta;)V
+
+	 [33] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [34] ConstUtf8Info
+		 Length of byte array: 		 12
+		 Length of string: 		 12
+		 String: 			 Jogador.java
+
+	 [35] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #21 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #48 <()V>
+
+	 [36] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #14 <nome>
+		 Descriptor: 			 ConstantPoolInfo #15 <Ljava/lang/String;>
+
+	 [37] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #18 <cardCounter>
+		 Descriptor: 			 ConstantPoolInfo #17 <I>
+
+	 [38] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 Carta
+
+	 [39] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #19 <cartas>
+		 Descriptor: 			 ConstantPoolInfo #20 <[LCarta;>
+
+	 [40] ConstUtf8Info
+		 Length of byte array: 		 0
+		 Length of string: 		 0
+		 String: 			 
+
+	 [41] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #21 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #49 <(ILjava/lang/String;I)V>
+
+	 [42] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #16 <pontuacao>
+		 Descriptor: 			 ConstantPoolInfo #17 <I>
+
+	 [43] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #50 <naipe>
+		 Descriptor: 			 ConstantPoolInfo #17 <I>
+
+	 [44] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #27 <primeiroJogador>
+		 Descriptor: 			 ConstantPoolInfo #28 <()LCarta;>
+
+	 [45] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #51 <valor>
+		 Descriptor: 			 ConstantPoolInfo #17 <I>
+
+	 [46] ConstUtf8Info
+		 Length of byte array: 		 7
+		 Length of string: 		 7
+		 String: 			 Jogador
+
+	 [47] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [48] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [49] ConstUtf8Info
+		 Length of byte array: 		 23
+		 Length of string: 		 23
+		 String: 			 (ILjava/lang/String;I)V
+
+	 [50] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 naipe
+
+	 [51] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 valor
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 4)
+{
+	[0] nome
+	{
+		Name: 			 ConstantPoolInfo #14 <nome>
+ 		Descriptor: 	 ConstantPoolInfo #15 <Ljava/lang/String;>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+	[1] pontuacao
+	{
+		Name: 			 ConstantPoolInfo #16 <pontuacao>
+ 		Descriptor: 	 ConstantPoolInfo #17 <I>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+	[2] cardCounter
+	{
+		Name: 			 ConstantPoolInfo #18 <cardCounter>
+ 		Descriptor: 	 ConstantPoolInfo #17 <I>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+	[3] cartas
+	{
+		Name: 			 ConstantPoolInfo #19 <cartas>
+ 		Descriptor: 	 ConstantPoolInfo #20 <[LCarta;>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+}
+
+Methods (Member count: 5)
+{
+	[0] <init>
+	{
+		Name: 		 ConstantPoolInfo #21 <<init>>
+		Descriptor: 	 ConstantPoolInfo #22 <(Ljava/lang/String;)V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #23
+				Attribute length:	 116
+				Maximum stack depth:	 7
+				Maximum local variables: 3
+				Code length:		 60
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	invokespecial #1 <java/lang/Object.<init>>
+					3	4	aload_0
+					4	5	aload_1
+					5	6	putfield #2 <Jogador.nome>
+					6	9	aload_0
+					7	10	iconst_0
+					8	11	putfield #3 <Jogador.cardCounter>
+					9	14	aload_0
+					10	15	bipush 13
+					11	17	anewarray #4 <Carta>
+					12	20	putfield #5 <Jogador.cartas>
+					13	23	iconst_0
+					14	24	istore_2
+					15	25	iload_2
+					16	26	bipush 13
+					17	28	if_icmpge 54 (+26)
+					18	31	aload_0
+					19	32	getfield #5 <Jogador.cartas>
+					20	35	iload_2
+					21	36	new #4 <Carta>
+					22	39	dup
+					23	40	iconst_1
+					24	41	ldc #6 <>
+					25	43	iconst_1
+					26	44	invokespecial #7 <Carta.<init>>
+					27	47	aastore
+					28	48	iinc 2 by 1
+					29	51	goto 25 (-26)
+					30	54	aload_0
+					31	55	iconst_0
+					32	56	putfield #8 <Jogador.pontuacao>
+					33	59	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #24
+						Attribute length:	 38
+						Nr.	 start_pc	 line_number
+						0	 0	 15
+						1	 4	 16
+						2	 9	 17
+						3	 14	 18
+						4	 23	 19
+						5	 31	 20
+						6	 48	 19
+						7	 54	 22
+						8	 59	 23
+
+
+	}
+	[1] addCarta
+	{
+		Name: 		 ConstantPoolInfo #25 <addCarta>
+		Descriptor: 	 ConstantPoolInfo #26 <(LCarta;)V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #23
+				Attribute length:	 53
+				Maximum stack depth:	 3
+				Maximum local variables: 2
+				Code length:		 21
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	getfield #5 <Jogador.cartas>
+					3	4	aload_0
+					4	5	getfield #3 <Jogador.cardCounter>
+					5	8	aload_1
+					6	9	aastore
+					7	10	aload_0
+					8	11	dup
+					9	12	getfield #3 <Jogador.cardCounter>
+					10	15	iconst_1
+					11	16	iadd
+					12	17	putfield #3 <Jogador.cardCounter>
+					13	20	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #24
+						Attribute length:	 14
+						Nr.	 start_pc	 line_number
+						0	 0	 25
+						1	 10	 26
+						2	 20	 27
+
+
+	}
+	[2] primeiroJogador
+	{
+		Name: 		 ConstantPoolInfo #27 <primeiroJogador>
+		Descriptor: 	 ConstantPoolInfo #28 <()LCarta;>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #23
+				Attribute length:	 119
+				Maximum stack depth:	 5
+				Maximum local variables: 3
+				Code length:		 63
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	new #4 <Carta>
+					2	3	dup
+					3	4	iconst_1
+					4	5	ldc #6 <>
+					5	7	iconst_1
+					6	8	invokespecial #7 <Carta.<init>>
+					7	11	astore_1
+					8	12	iconst_0
+					9	13	istore_2
+					10	14	iload_2
+					11	15	bipush 13
+					12	17	if_icmpge 61 (+44)
+					13	20	aload_0
+					14	21	getfield #5 <Jogador.cartas>
+					15	24	iload_2
+					16	25	aaload
+					17	26	ifnull 55 (+29)
+					18	29	aload_0
+					19	30	getfield #5 <Jogador.cartas>
+					20	33	iload_2
+					21	34	aaload
+					22	35	astore_1
+					23	36	aload_0
+					24	37	dup
+					25	38	getfield #3 <Jogador.cardCounter>
+					26	41	iconst_1
+					27	42	isub
+					28	43	putfield #3 <Jogador.cardCounter>
+					29	46	aload_0
+					30	47	getfield #5 <Jogador.cartas>
+					31	50	iload_2
+					32	51	aconst_null
+					33	52	aastore
+					34	53	aload_1
+					35	54	areturn
+					36	55	iinc 2 by 1
+					37	58	goto 14 (-44)
+					38	61	aconst_null
+					39	62	areturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #24
+						Attribute length:	 38
+						Nr.	 start_pc	 line_number
+						0	 0	 30
+						1	 12	 31
+						2	 20	 32
+						3	 29	 33
+						4	 36	 34
+						5	 46	 35
+						6	 53	 36
+						7	 55	 31
+						8	 61	 39
+
+
+	}
+	[3] play
+	{
+		Name: 		 ConstantPoolInfo #29 <play>
+		Descriptor: 	 ConstantPoolInfo #30 <(I)LCarta;>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #23
+				Attribute length:	 145
+				Maximum stack depth:	 5
+				Maximum local variables: 4
+				Code length:		 85
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	new #4 <Carta>
+					2	3	dup
+					3	4	iconst_1
+					4	5	ldc #6 <>
+					5	7	iconst_1
+					6	8	invokespecial #7 <Carta.<init>>
+					7	11	astore_2
+					8	12	iconst_0
+					9	13	istore_3
+					10	14	iload_3
+					11	15	aload_0
+					12	16	getfield #5 <Jogador.cartas>
+					13	19	arraylength
+					14	20	if_icmpge 80 (+60)
+					15	23	aload_0
+					16	24	getfield #5 <Jogador.cartas>
+					17	27	iload_3
+					18	28	aaload
+					19	29	ifnonnull 35 (+6)
+					20	32	goto 74 (+42)
+					21	35	aload_0
+					22	36	getfield #5 <Jogador.cartas>
+					23	39	iload_3
+					24	40	aaload
+					25	41	getfield #9 <Carta.naipe>
+					26	44	iload_1
+					27	45	if_icmpne 74 (+29)
+					28	48	aload_0
+					29	49	getfield #5 <Jogador.cartas>
+					30	52	iload_3
+					31	53	aaload
+					32	54	astore_2
+					33	55	aload_0
+					34	56	getfield #5 <Jogador.cartas>
+					35	59	iload_3
+					36	60	aconst_null
+					37	61	aastore
+					38	62	aload_0
+					39	63	dup
+					40	64	getfield #3 <Jogador.cardCounter>
+					41	67	iconst_1
+					42	68	isub
+					43	69	putfield #3 <Jogador.cardCounter>
+					44	72	aload_2
+					45	73	areturn
+					46	74	iinc 3 by 1
+					47	77	goto 14 (-63)
+					48	80	aload_0
+					49	81	invokevirtual #10 <Jogador.primeiroJogador>
+					50	84	areturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #24
+						Attribute length:	 42
+						Nr.	 start_pc	 line_number
+						0	 0	 42
+						1	 12	 43
+						2	 23	 44
+						3	 35	 45
+						4	 48	 46
+						5	 55	 47
+						6	 62	 48
+						7	 72	 49
+						8	 74	 43
+						9	 80	 53
+
+
+	}
+	[4] ganheiRodada
+	{
+		Name: 		 ConstantPoolInfo #31 <ganheiRodada>
+		Descriptor: 	 ConstantPoolInfo #32 <([LCarta;)V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #23
+				Attribute length:	 65
+				Maximum stack depth:	 4
+				Maximum local variables: 3
+				Code length:		 29
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	iconst_0
+					2	1	istore_2
+					3	2	iload_2
+					4	3	iconst_4
+					5	4	if_icmpge 28 (+24)
+					6	7	aload_0
+					7	8	dup
+					8	9	getfield #8 <Jogador.pontuacao>
+					9	12	aload_1
+					10	13	iload_2
+					11	14	aaload
+					12	15	getfield #11 <Carta.valor>
+					13	18	iadd
+					14	19	putfield #8 <Jogador.pontuacao>
+					15	22	iinc 2 by 1
+					16	25	goto 2 (-23)
+					17	28	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #24
+						Attribute length:	 18
+						Nr.	 start_pc	 line_number
+						0	 0	 57
+						1	 7	 58
+						2	 22	 57
+						3	 28	 60
+
+
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #33
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #34 <Jogador.java>
+
+}
+

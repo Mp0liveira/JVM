@@ -3191,15 +3191,15 @@ void Operations::getstatic()
     }
 
     MethodArea& methodArea = MethodArea::get_instance();
-    StaticClass* class_runtime = methodArea.load_class_by_name(className);
+    StaticClass* class_runtime = methodArea.load_class(className);
     while (class_runtime != NULL) {
-        if (class_runtime->field_exists(fieldName) == false) {
+        if (class_runtime->check_field(fieldName) == false) {
             if (class_runtime->get_class_file()->super_class == 0) {
                 class_runtime = NULL;
             } else {
                 string superClassName = get_formatted_constant(class_runtime->get_class_file()->constant_pool,
                     class_runtime->get_class_file()->super_class);
-                class_runtime = methodArea.load_class_by_name(superClassName);
+                class_runtime = methodArea.load_class(superClassName);
             }
         } else {
             break;
@@ -3212,7 +3212,7 @@ void Operations::getstatic()
 
     if (stack_frame.get_top_frame() != top_frame)
         return;
-    Value staticValue = class_runtime->get_value_from_field(fieldName);
+    Value staticValue = class_runtime->get_value(fieldName);
     switch (staticValue.type) {
     case ValueType::BOOLEAN:
         staticValue.type = ValueType::INT;
@@ -3263,15 +3263,15 @@ void Operations::putstatic()
     string fieldName = get_formatted_constant(constant_pool, fieldNameAndType.name_index);
     string fieldDescriptor = get_formatted_constant(constant_pool, fieldNameAndType.descriptor_index);
     MethodArea& methodArea = MethodArea::get_instance();
-    StaticClass* class_runtime = methodArea.load_class_by_name(className);
+    StaticClass* class_runtime = methodArea.load_class(className);
     while (class_runtime != NULL) {
-        if (class_runtime->field_exists(fieldName) == false) {
+        if (class_runtime->check_field(fieldName) == false) {
             if (class_runtime->get_class_file()->super_class == 0) {
                 class_runtime = NULL;
             } else {
                 string superClassName = get_formatted_constant(class_runtime->get_class_file()->constant_pool,
                     class_runtime->get_class_file()->super_class);
-                class_runtime = methodArea.load_class_by_name(superClassName);
+                class_runtime = methodArea.load_class(superClassName);
             }
         } else {
             break;
@@ -3307,7 +3307,7 @@ void Operations::putstatic()
             break;
         }
     }
-    class_runtime->insert_value_into_field(topValue, fieldName);
+    class_runtime->insert_value(topValue, fieldName);
     top_frame->pc += 3;
 }
 
@@ -3334,11 +3334,11 @@ void Operations::getfield()
     Object* object = objectValue.data.object;
     assert(object->object_type() == ObjectType::CLASS_INSTANCE);
     InstanceClass* classInstance = (InstanceClass*)object;
-    if (!classInstance->field_exists(fieldName)) {
+    if (!classInstance->check_field(fieldName)) {
         cerr << "NoSuchFieldError" << endl;
         exit(1);
     }
-    Value fieldValue = classInstance->get_value_from_field(fieldName);
+    Value fieldValue = classInstance->get_value(fieldName);
     switch (fieldValue.type) {
     case ValueType::BOOLEAN:
         fieldValue.type = ValueType::INT;
@@ -3416,7 +3416,7 @@ void Operations::putfield()
     Object* object = objectValue.data.object;
     assert(object->object_type() == ObjectType::CLASS_INSTANCE);
     InstanceClass* classInstance = (InstanceClass*)object;
-    classInstance->insert_value_into_field(valueToBeInserted, fieldName);
+    classInstance->insert_value(valueToBeInserted, fieldName);
     top_frame->pc += 3;
 }
 
@@ -3573,7 +3573,7 @@ void Operations::invokevirtual()
         assert(object->object_type() == ObjectType::CLASS_INSTANCE);
         InstanceClass* instance = (InstanceClass*)object;
         MethodArea& methodArea = MethodArea::get_instance();
-        StaticClass* class_runtime = methodArea.load_class_by_name(className);
+        StaticClass* class_runtime = methodArea.load_class(className);
         Frame* newFrame = new Frame(instance, class_runtime, method_name, methodDescriptor, args);
 
         if (stack_frame.get_top_frame() != top_frame) {
@@ -3656,7 +3656,7 @@ void Operations::invokespecial()
         assert(object->object_type() == ObjectType::CLASS_INSTANCE);
         InstanceClass* instance = (InstanceClass*)object;
         MethodArea& methodArea = MethodArea::get_instance();
-        StaticClass* class_runtime = methodArea.load_class_by_name(className);
+        StaticClass* class_runtime = methodArea.load_class(className);
         Frame* newFrame = new Frame(instance, class_runtime, method_name, methodDescriptor, args);
 
         if (stack_frame.get_top_frame() != top_frame) {
@@ -3728,7 +3728,7 @@ void Operations::invokestatic()
             }
         }
         MethodArea& methodArea = MethodArea::get_instance();
-        StaticClass* class_runtime = methodArea.load_class_by_name(className);
+        StaticClass* class_runtime = methodArea.load_class(className);
         Frame* newFrame = new Frame(class_runtime, method_name, methodDescriptor, args);
 
         if (stack_frame.get_top_frame() != top_frame) {
@@ -3802,7 +3802,7 @@ void Operations::invokeinterface()
         assert(object->object_type() == ObjectType::CLASS_INSTANCE);
         InstanceClass* instance = (InstanceClass*)object;
         MethodArea& methodArea = MethodArea::get_instance();
-        methodArea.load_class_by_name(className);
+        methodArea.load_class(className);
         Frame* newFrame = new Frame(instance, instance->get_class_runtime(), method_name, methodDescriptor, args);
 
         if (stack_frame.get_top_frame() != top_frame) {
@@ -3833,7 +3833,7 @@ void Operations::func_new()
         object = new StrObject();
     } else {
         MethodArea& methodArea = MethodArea::get_instance();
-        StaticClass* class_runtime = methodArea.load_class_by_name(className);
+        StaticClass* class_runtime = methodArea.load_class(className);
         object = new InstanceClass(class_runtime);
     }
 
@@ -3976,7 +3976,7 @@ void Operations::anewarray()
             i++;
         if (className[i] == 'L') {
             MethodArea& methodArea = MethodArea::get_instance();
-            methodArea.load_class_by_name(className.substr(i + 1, className.size() - i - 2));
+            methodArea.load_class(className.substr(i + 1, className.size() - i - 2));
         }
     }
 
@@ -4062,7 +4062,7 @@ void Operations::checkcast()
                         break;
                     } else {
                         string superClassName = get_formatted_constant(class_file->constant_pool, class_file->this_class);
-                        class_runtime = methodArea.load_class_by_name(superClassName);
+                        class_runtime = methodArea.load_class(superClassName);
                     }
                 }
             }
@@ -4118,7 +4118,7 @@ void Operations::instanceof()
                         break;
                     } else {
                         string superClassName = get_formatted_constant(class_file->constant_pool, class_file->this_class);
-                        class_runtime = methodArea.load_class_by_name(superClassName);
+                        class_runtime = methodArea.load_class(superClassName);
                     }
                 }
             }
@@ -4184,7 +4184,7 @@ void Operations::multianewarray()
     case 'L':
         if (multiArrayType != "java/lang/String") {
             MethodArea& methodArea = MethodArea::get_instance();
-            methodArea.load_class_by_name(multiArrayType);
+            methodArea.load_class(multiArrayType);
         }
         value_type = ValueType::REFERENCE;
         break;

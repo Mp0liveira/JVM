@@ -1,0 +1,456 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 46 [1.2]
+	 Constant Pool count: 		 60
+	 Access Flags: 			 0x0021 [public super ]
+	 This Class: 			 ConstantPoolInfo #18 <Carta>
+	 Super class: 			 ConstantPoolInfo #19 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 3
+	 Methods pool count: 		 2
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 60)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #19 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #33 <<init>()V>
+
+	 [2] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #18 <Carta>
+ 		 Name and type: 		 ConstantPoolInfo #34 <naipeI>
+
+	 [3] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #18 <Carta>
+ 		 Name and type: 		 ConstantPoolInfo #35 <nomeLjava/lang/String;>
+
+	 [4] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #18 <Carta>
+ 		 Name and type: 		 ConstantPoolInfo #36 <valorI>
+
+	 [5] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #37 <java/lang/String>
+
+	 [6] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #5 <java/lang/String>
+ 		 Name and type: 		 ConstantPoolInfo #33 <<init>()V>
+
+	 [7] ConstStrInfo
+	 String: 				 ConstantPoolInfo #38 <Paus>
+
+	 [8] ConstStrInfo
+	 String: 				 ConstantPoolInfo #39 <Ouros>
+
+	 [9] ConstStrInfo
+	 String: 				 ConstantPoolInfo #40 <Copas>
+
+	 [10] ConstStrInfo
+	 String: 				 ConstantPoolInfo #41 <Espadas>
+
+	 [11] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #42 <java/lang/System>
+ 		 Name and type: 		 ConstantPoolInfo #43 <outLjava/io/PrintStream;>
+
+	 [12] ConstStrInfo
+	 String: 				 ConstantPoolInfo #44 <O Naipe da carta e: >
+
+	 [13] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #45 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #46 <println(Ljava/lang/String;)V>
+
+	 [14] ConstStrInfo
+	 String: 				 ConstantPoolInfo #47 <>
+
+	 [15] ConstStrInfo
+	 String: 				 ConstantPoolInfo #48 <O valor da carta e: >
+
+	 [16] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #45 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #49 <println(I)V>
+
+	 [17] ConstStrInfo
+	 String: 				 ConstantPoolInfo #50 <O nome da carta e: >
+
+	 [18] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #51 <Carta>
+
+	 [19] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #52 <java/lang/Object>
+
+	 [20] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 naipe
+
+	 [21] ConstUtf8Info
+		 Length of byte array: 		 1
+		 Length of string: 		 1
+		 String: 			 I
+
+	 [22] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 nome
+
+	 [23] ConstUtf8Info
+		 Length of byte array: 		 18
+		 Length of string: 		 18
+		 String: 			 Ljava/lang/String;
+
+	 [24] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 valor
+
+	 [25] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [26] ConstUtf8Info
+		 Length of byte array: 		 23
+		 Length of string: 		 23
+		 String: 			 (ILjava/lang/String;I)V
+
+	 [27] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [28] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [29] ConstUtf8Info
+		 Length of byte array: 		 8
+		 Length of string: 		 8
+		 String: 			 printOut
+
+	 [30] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [31] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [32] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 Carta.java
+
+	 [33] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #25 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #30 <()V>
+
+	 [34] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #20 <naipe>
+		 Descriptor: 			 ConstantPoolInfo #21 <I>
+
+	 [35] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #22 <nome>
+		 Descriptor: 			 ConstantPoolInfo #23 <Ljava/lang/String;>
+
+	 [36] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #24 <valor>
+		 Descriptor: 			 ConstantPoolInfo #21 <I>
+
+	 [37] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/String
+
+	 [38] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Paus
+
+	 [39] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 Ouros
+
+	 [40] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 Copas
+
+	 [41] ConstUtf8Info
+		 Length of byte array: 		 7
+		 Length of string: 		 7
+		 String: 			 Espadas
+
+	 [42] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #53 <java/lang/System>
+
+	 [43] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #54 <out>
+		 Descriptor: 			 ConstantPoolInfo #55 <Ljava/io/PrintStream;>
+
+	 [44] ConstUtf8Info
+		 Length of byte array: 		 20
+		 Length of string: 		 20
+		 String: 			 O Naipe da carta e: 
+
+	 [45] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #56 <java/io/PrintStream>
+
+	 [46] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #57 <println>
+		 Descriptor: 			 ConstantPoolInfo #58 <(Ljava/lang/String;)V>
+
+	 [47] ConstUtf8Info
+		 Length of byte array: 		 1
+		 Length of string: 		 0
+		 String: 			 
+
+	 [48] ConstUtf8Info
+		 Length of byte array: 		 20
+		 Length of string: 		 20
+		 String: 			 O valor da carta e: 
+
+	 [49] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #57 <println>
+		 Descriptor: 			 ConstantPoolInfo #59 <(I)V>
+
+	 [50] ConstUtf8Info
+		 Length of byte array: 		 19
+		 Length of string: 		 19
+		 String: 			 O nome da carta e: 
+
+	 [51] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 Carta
+
+	 [52] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [53] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/System
+
+	 [54] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 out
+
+	 [55] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 Ljava/io/PrintStream;
+
+	 [56] ConstUtf8Info
+		 Length of byte array: 		 19
+		 Length of string: 		 19
+		 String: 			 java/io/PrintStream
+
+	 [57] ConstUtf8Info
+		 Length of byte array: 		 7
+		 Length of string: 		 7
+		 String: 			 println
+
+	 [58] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 (Ljava/lang/String;)V
+
+	 [59] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)V
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 3)
+{
+	[0] naipe
+	{
+		Name: 			 ConstantPoolInfo #20 <naipe>
+ 		Descriptor: 	 ConstantPoolInfo #21 <I>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+	[1] nome
+	{
+		Name: 			 ConstantPoolInfo #22 <nome>
+ 		Descriptor: 	 ConstantPoolInfo #23 <Ljava/lang/String;>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+	[2] valor
+	{
+		Name: 			 ConstantPoolInfo #24 <valor>
+ 		Descriptor: 	 ConstantPoolInfo #21 <I>
+ 		Access flags: 	 1 [public ]
+		Attributes:
+	}
+}
+
+Methods (Member count: 2)
+{
+	[0] <init>
+	{
+		Name: 		 ConstantPoolInfo #25 <<init>>
+		Descriptor: 	 ConstantPoolInfo #26 <(ILjava/lang/String;I)V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #27
+				Attribute length:	 60
+				Maximum stack depth:	 2
+				Maximum local variables: 4
+				Code length:		 20
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	invokespecial #1 <java/lang/Object.<init>>
+					3	4	aload_0
+					4	5	iload_1
+					5	6	putfield #2 <Carta.naipe>
+					6	9	aload_0
+					7	10	aload_2
+					8	11	putfield #3 <Carta.nome>
+					9	14	aload_0
+					10	15	iload_3
+					11	16	putfield #4 <Carta.valor>
+					12	19	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #28
+						Attribute length:	 22
+						Nr.	 start_pc	 line_number
+						0	 0	 12
+						1	 4	 13
+						2	 9	 14
+						3	 14	 15
+						4	 19	 16
+
+
+	}
+	[1] printOut
+	{
+		Name: 		 ConstantPoolInfo #29 <printOut>
+		Descriptor: 	 ConstantPoolInfo #30 <()V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #27
+				Attribute length:	 232
+				Maximum stack depth:	 2
+				Maximum local variables: 2
+				Code length:		 136
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	new #5 <java/lang/String>
+					2	3	dup
+					3	4	invokespecial #6 <java/lang/String.<init>>
+					4	7	astore_1
+					5	8	aload_0
+					6	9	getfield #2 <Carta.naipe>
+					7	12	ifne 21 (+9)
+					8	15	ldc #7 <Paus>
+					9	17	astore_1
+					10	18	goto 60 (+42)
+					11	21	aload_0
+					12	22	getfield #2 <Carta.naipe>
+					13	25	iconst_1
+					14	26	if_icmpne 35 (+9)
+					15	29	ldc #8 <Ouros>
+					16	31	astore_1
+					17	32	goto 60 (+28)
+					18	35	aload_0
+					19	36	getfield #2 <Carta.naipe>
+					20	39	iconst_2
+					21	40	if_icmpne 49 (+9)
+					22	43	ldc #9 <Copas>
+					23	45	astore_1
+					24	46	goto 60 (+14)
+					25	49	aload_0
+					26	50	getfield #2 <Carta.naipe>
+					27	53	iconst_3
+					28	54	if_icmpne 60 (+6)
+					29	57	ldc #10 <Espadas>
+					30	59	astore_1
+					31	60	getstatic #11 <java/lang/System.out>
+					32	63	ldc #12 <O Naipe da carta e: >
+					33	65	invokevirtual #13 <java/io/PrintStream.println>
+					34	68	getstatic #11 <java/lang/System.out>
+					35	71	aload_1
+					36	72	invokevirtual #13 <java/io/PrintStream.println>
+					37	75	getstatic #11 <java/lang/System.out>
+					38	78	ldc #14 <>
+					39	80	invokevirtual #13 <java/io/PrintStream.println>
+					40	83	getstatic #11 <java/lang/System.out>
+					41	86	ldc #15 <O valor da carta e: >
+					42	88	invokevirtual #13 <java/io/PrintStream.println>
+					43	91	getstatic #11 <java/lang/System.out>
+					44	94	aload_0
+					45	95	getfield #4 <Carta.valor>
+					46	98	invokevirtual #16 <java/io/PrintStream.println>
+					47	101	getstatic #11 <java/lang/System.out>
+					48	104	ldc #14 <>
+					49	106	invokevirtual #13 <java/io/PrintStream.println>
+					50	109	getstatic #11 <java/lang/System.out>
+					51	112	ldc #17 <O nome da carta e: >
+					52	114	invokevirtual #13 <java/io/PrintStream.println>
+					53	117	getstatic #11 <java/lang/System.out>
+					54	120	aload_0
+					55	121	getfield #3 <Carta.nome>
+					56	124	invokevirtual #13 <java/io/PrintStream.println>
+					57	127	getstatic #11 <java/lang/System.out>
+					58	130	ldc #14 <>
+					59	132	invokevirtual #13 <java/io/PrintStream.println>
+					60	135	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #28
+						Attribute length:	 78
+						Nr.	 start_pc	 line_number
+						0	 0	 18
+						1	 8	 19
+						2	 15	 20
+						3	 21	 22
+						4	 29	 23
+						5	 35	 25
+						6	 43	 26
+						7	 49	 28
+						8	 57	 29
+						9	 60	 31
+						10	 68	 32
+						11	 75	 33
+						12	 83	 34
+						13	 91	 35
+						14	 101	 36
+						15	 109	 37
+						16	 117	 38
+						17	 127	 39
+						18	 135	 40
+
+
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #31
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #32 <Carta.java>
+
+}
+

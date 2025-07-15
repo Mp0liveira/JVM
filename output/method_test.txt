@@ -1,0 +1,536 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 46 [1.2]
+	 Constant Pool count: 		 72
+	 Access Flags: 			 0x0021 [public super ]
+	 This Class: 			 ConstantPoolInfo #25 <method_test>
+	 Super class: 			 ConstantPoolInfo #26 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 0
+	 Methods pool count: 		 6
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 72)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #26 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #40 <<init>()V>
+
+	 [2] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #41 <java/lang/System>
+ 		 Name and type: 		 ConstantPoolInfo #42 <outLjava/io/PrintStream;>
+
+	 [3] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #25 <method_test>
+ 		 Name and type: 		 ConstantPoolInfo #43 <Soma(II)I>
+
+	 [4] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #44 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #45 <println(I)V>
+
+	 [5] ConstStrInfo
+	 String: 				 ConstantPoolInfo #46 <ab>
+
+	 [6] ConstStrInfo
+	 String: 				 ConstantPoolInfo #47 <cd>
+
+	 [7] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #25 <method_test>
+ 		 Name and type: 		 ConstantPoolInfo #48 <Soma(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;>
+
+	 [8] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #44 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #49 <println(Ljava/lang/String;)V>
+
+	 [9] ConstDoubleInfo
+		 High Bytes: 			 0x4041ACCC
+		 Low Bytes: 			 0xCCCCCCCD
+		 Double: 			 35.350000
+
+	 [10] (large numeric continued)
+
+	 [11] ConstDoubleInfo
+		 High Bytes: 			 0x403E5999
+		 Low Bytes: 			 0x9999999A
+		 Double: 			 30.350000
+
+	 [12] (large numeric continued)
+
+	 [13] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #25 <method_test>
+ 		 Name and type: 		 ConstantPoolInfo #50 <Soma(DD)D>
+
+	 [14] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #44 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #51 <println(D)V>
+
+	 [15] ConstLongInfo
+		 High Bytes: 			 0x00000000
+		 Low Bytes: 			 0x11E1A300
+		 Long: 				 300000000
+
+	 [16] (large numeric continued)
+
+	 [17] ConstLongInfo
+		 High Bytes: 			 0x00000000
+		 Low Bytes: 			 0x29B92700
+		 Long: 				 700000000
+
+	 [18] (large numeric continued)
+
+	 [19] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #25 <method_test>
+ 		 Name and type: 		 ConstantPoolInfo #52 <Soma(JJ)J>
+
+	 [20] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #44 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #53 <println(J)V>
+
+	 [21] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #54 <java/lang/StringBuffer>
+
+	 [22] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #21 <java/lang/StringBuffer>
+ 		 Name and type: 		 ConstantPoolInfo #40 <<init>()V>
+
+	 [23] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #21 <java/lang/StringBuffer>
+ 		 Name and type: 		 ConstantPoolInfo #55 <append(Ljava/lang/String;)Ljava/lang/StringBuffer;>
+
+	 [24] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #21 <java/lang/StringBuffer>
+ 		 Name and type: 		 ConstantPoolInfo #56 <toString()Ljava/lang/String;>
+
+	 [25] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #57 <method_test>
+
+	 [26] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #58 <java/lang/Object>
+
+	 [27] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [28] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [29] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [30] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [31] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 main
+
+	 [32] ConstUtf8Info
+		 Length of byte array: 		 22
+		 Length of string: 		 22
+		 String: 			 ([Ljava/lang/String;)V
+
+	 [33] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Soma
+
+	 [34] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 (II)I
+
+	 [35] ConstUtf8Info
+		 Length of byte array: 		 56
+		 Length of string: 		 56
+		 String: 			 (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+	 [36] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 (DD)D
+
+	 [37] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 (JJ)J
+
+	 [38] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [39] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 method_test.java
+
+	 [40] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #27 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #28 <()V>
+
+	 [41] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #59 <java/lang/System>
+
+	 [42] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #60 <out>
+		 Descriptor: 			 ConstantPoolInfo #61 <Ljava/io/PrintStream;>
+
+	 [43] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #33 <Soma>
+		 Descriptor: 			 ConstantPoolInfo #34 <(II)I>
+
+	 [44] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #62 <java/io/PrintStream>
+
+	 [45] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #63 <println>
+		 Descriptor: 			 ConstantPoolInfo #64 <(I)V>
+
+	 [46] ConstUtf8Info
+		 Length of byte array: 		 2
+		 Length of string: 		 2
+		 String: 			 ab
+
+	 [47] ConstUtf8Info
+		 Length of byte array: 		 2
+		 Length of string: 		 2
+		 String: 			 cd
+
+	 [48] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #33 <Soma>
+		 Descriptor: 			 ConstantPoolInfo #35 <(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;>
+
+	 [49] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #63 <println>
+		 Descriptor: 			 ConstantPoolInfo #65 <(Ljava/lang/String;)V>
+
+	 [50] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #33 <Soma>
+		 Descriptor: 			 ConstantPoolInfo #36 <(DD)D>
+
+	 [51] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #63 <println>
+		 Descriptor: 			 ConstantPoolInfo #66 <(D)V>
+
+	 [52] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #33 <Soma>
+		 Descriptor: 			 ConstantPoolInfo #37 <(JJ)J>
+
+	 [53] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #63 <println>
+		 Descriptor: 			 ConstantPoolInfo #67 <(J)V>
+
+	 [54] ConstUtf8Info
+		 Length of byte array: 		 22
+		 Length of string: 		 22
+		 String: 			 java/lang/StringBuffer
+
+	 [55] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #68 <append>
+		 Descriptor: 			 ConstantPoolInfo #69 <(Ljava/lang/String;)Ljava/lang/StringBuffer;>
+
+	 [56] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #70 <toString>
+		 Descriptor: 			 ConstantPoolInfo #71 <()Ljava/lang/String;>
+
+	 [57] ConstUtf8Info
+		 Length of byte array: 		 11
+		 Length of string: 		 11
+		 String: 			 method_test
+
+	 [58] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [59] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/System
+
+	 [60] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 out
+
+	 [61] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 Ljava/io/PrintStream;
+
+	 [62] ConstUtf8Info
+		 Length of byte array: 		 19
+		 Length of string: 		 19
+		 String: 			 java/io/PrintStream
+
+	 [63] ConstUtf8Info
+		 Length of byte array: 		 7
+		 Length of string: 		 7
+		 String: 			 println
+
+	 [64] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)V
+
+	 [65] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 (Ljava/lang/String;)V
+
+	 [66] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (D)V
+
+	 [67] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (J)V
+
+	 [68] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 append
+
+	 [69] ConstUtf8Info
+		 Length of byte array: 		 44
+		 Length of string: 		 44
+		 String: 			 (Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+	 [70] ConstUtf8Info
+		 Length of byte array: 		 8
+		 Length of string: 		 8
+		 String: 			 toString
+
+	 [71] ConstUtf8Info
+		 Length of byte array: 		 20
+		 Length of string: 		 20
+		 String: 			 ()Ljava/lang/String;
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 0)
+{
+}
+
+Methods (Member count: 6)
+{
+	[0] <init>
+	{
+		Name: 		 ConstantPoolInfo #27 <<init>>
+		Descriptor: 	 ConstantPoolInfo #28 <()V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #29
+				Attribute length:	 29
+				Maximum stack depth:	 1
+				Maximum local variables: 1
+				Code length:		 5
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	invokespecial #1 <java/lang/Object.<init>>
+					3	4	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #30
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 10
+
+
+	}
+	[1] main
+	{
+		Name: 		 ConstantPoolInfo #31 <main>
+		Descriptor: 	 ConstantPoolInfo #32 <([Ljava/lang/String;)V>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #29
+				Attribute length:	 95
+				Maximum stack depth:	 5
+				Maximum local variables: 1
+				Code length:		 55
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	getstatic #2 <java/lang/System.out>
+					2	3	iconst_2
+					3	4	iconst_3
+					4	5	invokestatic #3 <method_test.Soma>
+					5	8	invokevirtual #4 <java/io/PrintStream.println>
+					6	11	getstatic #2 <java/lang/System.out>
+					7	14	ldc #5 <ab>
+					8	16	ldc #6 <cd>
+					9	18	invokestatic #7 <method_test.Soma>
+					10	21	invokevirtual #8 <java/io/PrintStream.println>
+					11	24	getstatic #2 <java/lang/System.out>
+					12	27	ldc2_w #9 <35.350000>
+					13	30	ldc2_w #11 <30.350000>
+					14	33	invokestatic #13 <method_test.Soma>
+					15	36	invokevirtual #14 <java/io/PrintStream.println>
+					16	39	getstatic #2 <java/lang/System.out>
+					17	42	ldc2_w #15 <300000000>
+					18	45	ldc2_w #17 <700000000>
+					19	48	invokestatic #19 <method_test.Soma>
+					20	51	invokevirtual #20 <java/io/PrintStream.println>
+					21	54	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #30
+						Attribute length:	 22
+						Nr.	 start_pc	 line_number
+						0	 0	 12
+						1	 11	 13
+						2	 24	 14
+						3	 39	 15
+						4	 54	 16
+
+
+	}
+	[2] Soma
+	{
+		Name: 		 ConstantPoolInfo #33 <Soma>
+		Descriptor: 	 ConstantPoolInfo #34 <(II)I>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #29
+				Attribute length:	 28
+				Maximum stack depth:	 2
+				Maximum local variables: 2
+				Code length:		 4
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	iload_0
+					2	1	iload_1
+					3	2	iadd
+					4	3	ireturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #30
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 18
+
+
+	}
+	[3] Soma
+	{
+		Name: 		 ConstantPoolInfo #33 <Soma>
+		Descriptor: 	 ConstantPoolInfo #35 <(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #29
+				Attribute length:	 43
+				Maximum stack depth:	 2
+				Maximum local variables: 2
+				Code length:		 19
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	new #21 <java/lang/StringBuffer>
+					2	3	dup
+					3	4	invokespecial #22 <java/lang/StringBuffer.<init>>
+					4	7	aload_0
+					5	8	invokevirtual #23 <java/lang/StringBuffer.append>
+					6	11	aload_1
+					7	12	invokevirtual #23 <java/lang/StringBuffer.append>
+					8	15	invokevirtual #24 <java/lang/StringBuffer.toString>
+					9	18	areturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #30
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 22
+
+
+	}
+	[4] Soma
+	{
+		Name: 		 ConstantPoolInfo #33 <Soma>
+		Descriptor: 	 ConstantPoolInfo #36 <(DD)D>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #29
+				Attribute length:	 28
+				Maximum stack depth:	 4
+				Maximum local variables: 4
+				Code length:		 4
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	dload_0
+					2	1	dload_2
+					3	2	dadd
+					4	3	dreturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #30
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 26
+
+
+	}
+	[5] Soma
+	{
+		Name: 		 ConstantPoolInfo #33 <Soma>
+		Descriptor: 	 ConstantPoolInfo #37 <(JJ)J>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #29
+				Attribute length:	 28
+				Maximum stack depth:	 4
+				Maximum local variables: 4
+				Code length:		 4
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	lload_0
+					2	1	lload_2
+					3	2	lsub
+					4	3	lreturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #30
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 30
+
+
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #38
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #39 <method_test.java>
+
+}
+

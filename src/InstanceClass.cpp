@@ -78,7 +78,7 @@ InstanceClass::InstanceClass(StaticClass *class_runtime) :
       }
 
       // Armazena o valor inicial no mapa de campos
-      insert_value_into_field(value, fieldName);
+      insert_value(value, fieldName);
     }
   }
 }
@@ -101,13 +101,13 @@ StaticClass* InstanceClass::get_class_runtime()
 }
 
 // Insere valor em um campo da instância
-void InstanceClass::insert_value_into_field(Value value, const string& fieldName)
+void InstanceClass::insert_value(Value value, const string& fieldName)
 {
   class_fields[fieldName] = value;
 }
 
 // Recupera valor de um campo; erro se não existir
-Value InstanceClass::get_value_from_field(const string& fieldName)
+Value InstanceClass::get_value(const string& fieldName)
 {
   if (class_fields.count(fieldName) == 0) {
     cerr << "NoSuchFieldError" << endl;
@@ -118,7 +118,7 @@ Value InstanceClass::get_value_from_field(const string& fieldName)
 }
 
 // Verifica se o campo existe na instância
-bool InstanceClass::field_exists(const string& fieldName)
+bool InstanceClass::check_field(const string& fieldName)
 {
   return class_fields.count(fieldName) > 0;
 }

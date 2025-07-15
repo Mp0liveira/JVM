@@ -1,0 +1,320 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 46 [1.2]
+	 Constant Pool count: 		 38
+	 Access Flags: 			 0x0020 [super ]
+	 This Class: 			 ConstantPoolInfo #8 <FibonacciRec>
+	 Super class: 			 ConstantPoolInfo #9 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 0
+	 Methods pool count: 		 3
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 38)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #9 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #20 <<init>()V>
+
+	 [2] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #21 <java/lang/System>
+ 		 Name and type: 		 ConstantPoolInfo #22 <outLjava/io/PrintStream;>
+
+	 [3] ConstStrInfo
+	 String: 				 ConstantPoolInfo #23 <Serie De Fibonacci: >
+
+	 [4] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #24 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #25 <print(Ljava/lang/String;)V>
+
+	 [5] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #8 <FibonacciRec>
+ 		 Name and type: 		 ConstantPoolInfo #26 <fib(I)I>
+
+	 [6] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #24 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #27 <print(I)V>
+
+	 [7] ConstStrInfo
+	 String: 				 ConstantPoolInfo #28 < >
+
+	 [8] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #29 <FibonacciRec>
+
+	 [9] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #30 <java/lang/Object>
+
+	 [10] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [11] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [12] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [13] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [14] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 main
+
+	 [15] ConstUtf8Info
+		 Length of byte array: 		 22
+		 Length of string: 		 22
+		 String: 			 ([Ljava/lang/String;)V
+
+	 [16] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 fib
+
+	 [17] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)I
+
+	 [18] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [19] ConstUtf8Info
+		 Length of byte array: 		 17
+		 Length of string: 		 17
+		 String: 			 FibonacciRec.java
+
+	 [20] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #10 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #11 <()V>
+
+	 [21] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #31 <java/lang/System>
+
+	 [22] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #32 <out>
+		 Descriptor: 			 ConstantPoolInfo #33 <Ljava/io/PrintStream;>
+
+	 [23] ConstUtf8Info
+		 Length of byte array: 		 20
+		 Length of string: 		 20
+		 String: 			 Serie De Fibonacci: 
+
+	 [24] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #34 <java/io/PrintStream>
+
+	 [25] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #35 <print>
+		 Descriptor: 			 ConstantPoolInfo #36 <(Ljava/lang/String;)V>
+
+	 [26] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #16 <fib>
+		 Descriptor: 			 ConstantPoolInfo #17 <(I)I>
+
+	 [27] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #35 <print>
+		 Descriptor: 			 ConstantPoolInfo #37 <(I)V>
+
+	 [28] ConstUtf8Info
+		 Length of byte array: 		 1
+		 Length of string: 		 1
+		 String: 			  
+
+	 [29] ConstUtf8Info
+		 Length of byte array: 		 12
+		 Length of string: 		 12
+		 String: 			 FibonacciRec
+
+	 [30] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [31] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/System
+
+	 [32] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 out
+
+	 [33] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 Ljava/io/PrintStream;
+
+	 [34] ConstUtf8Info
+		 Length of byte array: 		 19
+		 Length of string: 		 19
+		 String: 			 java/io/PrintStream
+
+	 [35] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 print
+
+	 [36] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 (Ljava/lang/String;)V
+
+	 [37] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)V
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 0)
+{
+}
+
+Methods (Member count: 3)
+{
+	[0] <init>
+	{
+		Name: 		 ConstantPoolInfo #10 <<init>>
+		Descriptor: 	 ConstantPoolInfo #11 <()V>
+		Access flags: 	 0x0000 []
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #12
+				Attribute length:	 29
+				Maximum stack depth:	 1
+				Maximum local variables: 1
+				Code length:		 5
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	invokespecial #1 <java/lang/Object.<init>>
+					3	4	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #13
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 1
+
+
+	}
+	[1] main
+	{
+		Name: 		 ConstantPoolInfo #14 <main>
+		Descriptor: 	 ConstantPoolInfo #15 <([Ljava/lang/String;)V>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #12
+				Attribute length:	 91
+				Maximum stack depth:	 2
+				Maximum local variables: 3
+				Code length:		 43
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	bipush 20
+					2	2	istore_1
+					3	3	getstatic #2 <java/lang/System.out>
+					4	6	ldc #3 <Serie De Fibonacci: >
+					5	8	invokevirtual #4 <java/io/PrintStream.print>
+					6	11	iconst_1
+					7	12	istore_2
+					8	13	iload_2
+					9	14	iload_1
+					10	15	if_icmpge 42 (+27)
+					11	18	getstatic #2 <java/lang/System.out>
+					12	21	iload_2
+					13	22	invokestatic #5 <FibonacciRec.fib>
+					14	25	invokevirtual #6 <java/io/PrintStream.print>
+					15	28	getstatic #2 <java/lang/System.out>
+					16	31	ldc #7 < >
+					17	33	invokevirtual #4 <java/io/PrintStream.print>
+					18	36	iinc 2 by 1
+					19	39	goto 13 (-26)
+					20	42	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #13
+						Attribute length:	 30
+						Nr.	 start_pc	 line_number
+						0	 0	 5
+						1	 3	 7
+						2	 11	 8
+						3	 18	 10
+						4	 28	 11
+						5	 36	 8
+						6	 42	 17
+
+
+	}
+	[2] fib
+	{
+		Name: 		 ConstantPoolInfo #16 <fib>
+		Descriptor: 	 ConstantPoolInfo #17 <(I)I>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #12
+				Attribute length:	 53
+				Maximum stack depth:	 3
+				Maximum local variables: 1
+				Code length:		 21
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	iload_0
+					2	1	iconst_2
+					3	2	if_icmpgt 7 (+5)
+					4	5	iconst_1
+					5	6	ireturn
+					6	7	iload_0
+					7	8	iconst_1
+					8	9	isub
+					9	10	invokestatic #5 <FibonacciRec.fib>
+					10	13	iload_0
+					11	14	iconst_2
+					12	15	isub
+					13	16	invokestatic #5 <FibonacciRec.fib>
+					14	19	iadd
+					15	20	ireturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #13
+						Attribute length:	 14
+						Nr.	 start_pc	 line_number
+						0	 0	 20
+						1	 5	 21
+						2	 7	 23
+
+
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #18
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #19 <FibonacciRec.java>
+
+}
+

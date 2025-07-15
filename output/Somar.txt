@@ -1,0 +1,116 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 52 [8.0]
+	 Constant Pool count: 		 14
+	 Access Flags: 			 0x0600 [interface abstract ]
+	 This Class: 			 ConstantPoolInfo #1 <Somar>
+	 Super class: 			 ConstantPoolInfo #2 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 1
+	 Methods pool count: 		 1
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 14)
+{
+	 [1] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #12 <Somar>
+
+	 [2] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #13 <java/lang/Object>
+
+	 [3] ConstUtf8Info
+		 Length of byte array: 		 2
+		 Length of string: 		 2
+		 String: 			 pi
+
+	 [4] ConstUtf8Info
+		 Length of byte array: 		 1
+		 Length of string: 		 1
+		 String: 			 D
+
+	 [5] ConstUtf8Info
+		 Length of byte array: 		 13
+		 Length of string: 		 13
+		 String: 			 ConstantValue
+
+	 [6] ConstDoubleInfo
+		 High Bytes: 			 0x400921CA
+		 Low Bytes: 			 0xC083126F
+		 Double: 			 3.141500
+
+	 [7] (large numeric continued)
+
+	 [8] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 somar
+
+	 [9] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 (II)I
+
+	 [10] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [11] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 somar.java
+
+	 [12] ConstUtf8Info
+		 Length of byte array: 		 5
+		 Length of string: 		 5
+		 String: 			 Somar
+
+	 [13] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 1)
+{
+	[0] pi
+	{
+		Name: 			 ConstantPoolInfo #3 <pi>
+ 		Descriptor: 	 ConstantPoolInfo #4 <D>
+ 		Access flags: 	 19 [public final static ]
+		Attributes:
+			[0] ConstantValue
+				Attribute name index:	 ConstantPoolInfo #5
+				Attribute length:	 2
+				Constant value index:	 ConstantPoolInfo #6 <3.141500>
+
+	}
+}
+
+Methods (Member count: 1)
+{
+	[0] somar
+	{
+		Name: 		 ConstantPoolInfo #8 <somar>
+		Descriptor: 	 ConstantPoolInfo #9 <(II)I>
+		Access flags: 	 0x0401 [public abstract ]
+		Attributes:
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #10
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #11 <somar.java>
+
+}
+

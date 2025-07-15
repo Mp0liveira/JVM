@@ -1,0 +1,267 @@
+General Information
+{
+	 Minor Version: 		 0
+	 Major Version: 		 46 [1.2]
+	 Constant Pool count: 		 31
+	 Access Flags: 			 0x0021 [public super ]
+	 This Class: 			 ConstantPoolInfo #5 <fatorial>
+	 Super class: 			 ConstantPoolInfo #6 <java/lang/Object>
+	 Interfaces count: 		 0
+	 Fields count: 			 0
+	 Methods pool count: 		 3
+	 Attributes pool count: 	 1
+}
+
+Constant Pool (Member count: 31)
+{
+	 [1] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #6 <java/lang/Object>
+ 		 Name and type: 		 ConstantPoolInfo #17 <<init>()V>
+
+	 [2] ConstFieldRefInfo
+		 Class name: 			 ConstantPoolInfo #18 <java/lang/System>
+ 		 Name and type: 		 ConstantPoolInfo #19 <outLjava/io/PrintStream;>
+
+	 [3] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #5 <fatorial>
+ 		 Name and type: 		 ConstantPoolInfo #20 <fat(I)I>
+
+	 [4] ConstMethodRefInfo
+		 Class name: 			 ConstantPoolInfo #21 <java/io/PrintStream>
+ 		 Name and type: 		 ConstantPoolInfo #22 <println(I)V>
+
+	 [5] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #23 <fatorial>
+
+	 [6] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #24 <java/lang/Object>
+
+	 [7] ConstUtf8Info
+		 Length of byte array: 		 6
+		 Length of string: 		 6
+		 String: 			 <init>
+
+	 [8] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 ()V
+
+	 [9] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 Code
+
+	 [10] ConstUtf8Info
+		 Length of byte array: 		 15
+		 Length of string: 		 15
+		 String: 			 LineNumberTable
+
+	 [11] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 main
+
+	 [12] ConstUtf8Info
+		 Length of byte array: 		 22
+		 Length of string: 		 22
+		 String: 			 ([Ljava/lang/String;)V
+
+	 [13] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 fat
+
+	 [14] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)I
+
+	 [15] ConstUtf8Info
+		 Length of byte array: 		 10
+		 Length of string: 		 10
+		 String: 			 SourceFile
+
+	 [16] ConstUtf8Info
+		 Length of byte array: 		 13
+		 Length of string: 		 13
+		 String: 			 fatorial.java
+
+	 [17] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #7 <<init>>
+		 Descriptor: 			 ConstantPoolInfo #8 <()V>
+
+	 [18] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #25 <java/lang/System>
+
+	 [19] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #26 <out>
+		 Descriptor: 			 ConstantPoolInfo #27 <Ljava/io/PrintStream;>
+
+	 [20] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #13 <fat>
+		 Descriptor: 			 ConstantPoolInfo #14 <(I)I>
+
+	 [21] ConstClassInfo
+		 Class name: 			 ConstantPoolInfo #28 <java/io/PrintStream>
+
+	 [22] ConstNameTypeInfo
+		 Name: 				 ConstantPoolInfo #29 <println>
+		 Descriptor: 			 ConstantPoolInfo #30 <(I)V>
+
+	 [23] ConstUtf8Info
+		 Length of byte array: 		 8
+		 Length of string: 		 8
+		 String: 			 fatorial
+
+	 [24] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/Object
+
+	 [25] ConstUtf8Info
+		 Length of byte array: 		 16
+		 Length of string: 		 16
+		 String: 			 java/lang/System
+
+	 [26] ConstUtf8Info
+		 Length of byte array: 		 3
+		 Length of string: 		 3
+		 String: 			 out
+
+	 [27] ConstUtf8Info
+		 Length of byte array: 		 21
+		 Length of string: 		 21
+		 String: 			 Ljava/io/PrintStream;
+
+	 [28] ConstUtf8Info
+		 Length of byte array: 		 19
+		 Length of string: 		 19
+		 String: 			 java/io/PrintStream
+
+	 [29] ConstUtf8Info
+		 Length of byte array: 		 7
+		 Length of string: 		 7
+		 String: 			 println
+
+	 [30] ConstUtf8Info
+		 Length of byte array: 		 4
+		 Length of string: 		 4
+		 String: 			 (I)V
+
+}
+
+Interfaces (Member count: 0) 
+{
+}
+
+Fields (Member count: 0)
+{
+}
+
+Methods (Member count: 3)
+{
+	[0] <init>
+	{
+		Name: 		 ConstantPoolInfo #7 <<init>>
+		Descriptor: 	 ConstantPoolInfo #8 <()V>
+		Access flags: 	 0x0001 [public ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #9
+				Attribute length:	 29
+				Maximum stack depth:	 1
+				Maximum local variables: 1
+				Code length:		 5
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	aload_0
+					2	1	invokespecial #1 <java/lang/Object.<init>>
+					3	4	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #10
+						Attribute length:	 6
+						Nr.	 start_pc	 line_number
+						0	 0	 1
+
+
+	}
+	[1] main
+	{
+		Name: 		 ConstantPoolInfo #11 <main>
+		Descriptor: 	 ConstantPoolInfo #12 <([Ljava/lang/String;)V>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #9
+				Attribute length:	 40
+				Maximum stack depth:	 2
+				Maximum local variables: 1
+				Code length:		 12
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	getstatic #2 <java/lang/System.out>
+					2	3	bipush 6
+					3	5	invokestatic #3 <fatorial.fat>
+					4	8	invokevirtual #4 <java/io/PrintStream.println>
+					5	11	return
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #10
+						Attribute length:	 10
+						Nr.	 start_pc	 line_number
+						0	 0	 5
+						1	 11	 6
+
+
+	}
+	[2] fat
+	{
+		Name: 		 ConstantPoolInfo #13 <fat>
+		Descriptor: 	 ConstantPoolInfo #14 <(I)I>
+		Access flags: 	 0x0009 [public static ]
+		Attributes:
+			[0] Code
+				Attribute name index:	 ConstantPoolInfo #9
+				Attribute length:	 47
+				Maximum stack depth:	 3
+				Maximum local variables: 1
+				Code length:		 15
+				Exception table:
+					Exception table is empty.
+				Bytecode:
+					1	0	iload_0
+					2	1	ifne 6 (+5)
+					3	4	iconst_1
+					4	5	ireturn
+					5	6	iload_0
+					6	7	iload_0
+					7	8	iconst_1
+					8	9	isub
+					9	10	invokestatic #3 <fatorial.fat>
+					10	13	imul
+					11	14	ireturn
+				Attributes:
+					[0] LineNumberTable
+						Attribute name index:	 ConstantPoolInfo #10
+						Attribute length:	 14
+						Nr.	 start_pc	 line_number
+						0	 0	 9
+						1	 4	 11
+						2	 6	 15
+
+
+	}
+}
+
+Attributes (Member count: 1)
+{
+	[0] SourceFile
+		Attribute name index:	 ConstantPoolInfo #15
+		Attribute length:	 2
+		Constant value index:	 ConstantPoolInfo #16 <fatorial.java>
+
+}
+
