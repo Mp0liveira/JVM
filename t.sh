@@ -55,9 +55,9 @@ echo "--------------------------------------- " >> out.txt
 echo tableswitch.class >> out.txt
 ./bin -e=./examples/tableswitch.class &>> out.txt
 echo "--------------------------------------- " >> out.txt
-echo vetor2.class >> out.txt
+echo vetor_8.class >> out.txt
 ./bin -e=./examples/vetor2.class &>> out.txt
 echo "--------------------------------------- " >> out.txt
-echo vetor_8.class >> out.txt
+echo vetor2.class >> out.txt
 ./bin -e=./examples/vetor_8.class &>> out.txt
 
