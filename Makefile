@@ -1,5 +1,3 @@
-# Makefile Corrigido e Simplificado para C++17
-
 # 1. Compilador C++
 CC = g++
 
