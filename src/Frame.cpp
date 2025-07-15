@@ -140,7 +140,7 @@ MethodInfo* Frame::obterMethodNamed(StaticClass *classRuntime, const string& nam
     } else {
       // Continua busca na superclasse
       string superClassName = get_formatted_constant(classFile->constant_pool, classFile->super_class);
-      currClass = methodArea.get_class_by_name(superClassName);
+      currClass = methodArea.get_class(superClassName);
     }
   }
 
