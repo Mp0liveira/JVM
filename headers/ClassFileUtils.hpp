@@ -12,9 +12,10 @@
 using namespace std;
 
 /**
- * @class ClassFileUtils
+ * @file ClassFileUtils.hpp
  * @brief Classe utilitária para operações auxiliares relacionadas à leitura e manipulação de arquivos `.class` Java.
  */
+
 class ClassFileUtils {
 public:
 

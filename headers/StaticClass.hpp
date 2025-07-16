@@ -1,5 +1,5 @@
-#ifndef STATIC_CLASS_HPP
-#define STATIC_CLASS_HPP
+#ifndef STATICCLASS
+#define STATICCLASS
 
 #include "ClassFile.hpp"
 #include "ClassFileReader.hpp"
@@ -9,10 +9,13 @@
 using namespace std;
 
 /**
- * @class StaticClass
+ * @file StaticClass.hpp
  * @brief Representa uma classe carregada na JVM, com suporte a campos estáticos.
- *
- * Armazena e gerencia os dados de uma classe Java carregada, incluindo o acesso
+ */
+
+ /**
+ * @class StaticClass.hpp
+ * @brief Armazena e gerencia os dados de uma classe Java carregada, incluindo o acesso
  * aos seus campos estáticos e à estrutura `ClassFile` correspondente.
  */
 class StaticClass {
@@ -65,4 +68,4 @@ private:
     map<string, Value> static_fields;
 };
 
-#endif // STATIC_CLASS_HPP
+#endif

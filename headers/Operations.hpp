@@ -1,5 +1,5 @@
-#ifndef OPERATIONS_HPP
-#define OPERATIONS_HPP
+#ifndef OPERATIONS
+#define OPERATIONS
 
 #include "Array.hpp"
 #include "BaseType.hpp"
@@ -23,10 +23,13 @@
 using namespace std;
 
 /**
- * @class Operations
+ * @file Operations.hpp
  * @brief Executa instruções da JVM simulada (padrão Singleton).
- *
- * Esta classe contém a implementação das instruções do bytecode Java (como `iconst_0`, `aload`, `invokevirtual`, etc).
+ */
+
+ /** 
+ * @class Operations.hpp
+ * @brief Esta classe contém a implementação das instruções do bytecode Java (como `iconst_0`, `aload`, `invokevirtual`, etc).
  * Também gerencia o ciclo de execução dos métodos estáticos e auxilia na manipulação de arrays e pilha.
  */
 class Operations {
@@ -68,6 +71,15 @@ public:
     void populateMultiarray(Array* array, ValueType value, stack<int> count);
 
 private:
+
+    /**
+     * @typedef generic_function
+     * @brief Ponteiro para função membro da classe Operations.
+     *
+     * Representa o tipo de uma função de instrução da JVM.
+     */
+    typedef void (Operations::*generic_function)();
+
     /// Construtor privado (padrão Singleton)
     Operations();
 
@@ -213,7 +225,10 @@ private:
     void lshr(); 
     void iushr(); 
     void lushr();
-    void iand(); void land(); void ior(); void lor(); 
+    void iand(); 
+    void land(); 
+    void ior(); 
+    void lor(); 
     void ixor();
     void lxor();
     void iinc();
@@ -287,12 +302,4 @@ private:
     void jsr_w();
 };
 
-/**
- * @typedef generic_function
- * @brief Ponteiro para função membro da classe Operations.
- *
- * Representa o tipo de uma função de instrução da JVM.
- */
-typedef void (Operations::*generic_function)();
-
-#endif // OPERATIONS_HPP
+#endif 

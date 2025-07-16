@@ -67,26 +67,84 @@ private:
      */
     bool check_endian_type();
 
-    // --- Funções para leitura de tipos básicos ---
-
+    /**
+    * @brief Lê um byte (unsigned 8 bits) do arquivo.
+    * 
+    * @param file Ponteiro para o arquivo aberto em modo leitura binária.
+    * @return u1 Valor lido do arquivo.
+    */
     u1 read_u1(FILE* file);
+
+    /**
+    * @brief Lê dois bytes (unsigned 16 bits) do arquivo, com endianness Big-Endian.
+    * 
+    * @param file Ponteiro para o arquivo aberto em modo leitura binária.
+    * @return u2 Valor lido do arquivo.
+    */
     u2 read_u2(FILE* file);
+
+    /**
+    * @brief Lê quatro bytes (unsigned 32 bits) do arquivo, com endianness Big-Endian.
+    * 
+    * @param file Ponteiro para o arquivo aberto em modo leitura binária.
+    * @return u4 Valor lido do arquivo.
+    */
     u4 read_u4(FILE* file);
 
-    // --- Leitura e verificação do número mágico ---
-
+    /**
+    * @brief Lê e define o campo "magic" de um arquivo .class a partir do arquivo aberto.
+    * 
+    * @param fp Ponteiro para o arquivo .class aberto em modo leitura binária.
+    * @param class_file Ponteiro para a estrutura ClassFile onde o campo magic será armazenado.
+    */
     void set_magic(FILE* fp, ClassFile* class_file);
+
+    /**
+    * @brief Verifica se o campo "magic" da estrutura ClassFile possui o valor esperado (0xCAFEBABE).
+    * 
+    * @param class_file Ponteiro para a estrutura ClassFile a ser verificada.
+    * @return true Se o campo magic for válido (igual a 0xCAFEBABE).
+    * @return false Caso contrário.
+    */
     bool check_magic_valid(ClassFile* class_file);
 
-    // --- Leitura da versão do class file ---
-
+    /**
+    * @brief Lê e define as versões minor e major de um arquivo .class a partir do arquivo aberto.
+    * 
+    * @param fp Ponteiro para o arquivo .class aberto em modo leitura binária.
+    * @param class_file Ponteiro para a estrutura ClassFile onde as versões serão armazenadas.
+    */
     void set_version(FILE* fp, ClassFile* class_file);
+
+    /**
+    * @brief Verifica se a versão major da estrutura ClassFile corresponde à versão esperada.
+    * 
+    * @param class_file Ponteiro para a estrutura ClassFile a ser verificada.
+    * @param major Versão major esperada para validação.
+    * @return true Se a versão major for válida (igual ao parâmetro major).
+    * @return false Caso contrário.
+    */
     bool is_version_valid(ClassFile* class_file, uint16_t major);
 
-    // --- Leitura da constant pool ---
 
-    void set_constant_pool(FILE* fp, ClassFile* class_file);
+    /**
+    * @brief Lê o tamanho da constant pool a partir do arquivo .class e armazena na estrutura ClassFile.
+    * 
+    * @param fp Ponteiro para o arquivo .class aberto em modo leitura binária.
+    * @param class_file Ponteiro para a estrutura ClassFile onde o tamanho da constant pool será armazenado.
+    */
     void set_constant_pool_size(FILE* fp, ClassFile* class_file);
+
+    /**
+    * @brief Lê e popula as entradas da constant pool no arquivo .class dentro da estrutura ClassFile.
+    * 
+    * Deve ser chamado após set_constant_pool_size para reservar o espaço necessário.
+    * 
+    * @param fp Ponteiro para o arquivo .class aberto em modo leitura binária.
+    * @param class_file Ponteiro para a estrutura ClassFile onde a constant pool será armazenada.
+    */
+    void set_constant_pool(FILE* fp, ClassFile* class_file);
+
 
     // --- Leitura de entradas específicas da constant pool ---
 

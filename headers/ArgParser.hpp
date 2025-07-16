@@ -1,12 +1,12 @@
-#ifndef HEADER_FILE_NAME_HPP
-#define HEADER_FILE_NAME_HPP
+#ifndef ARGPARSER
+#define ARGPARSER
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 /**
- * @file HEADER_FILE_NAME_HPP
+ * @file ArgParser.hpp
  * @brief Declara a estrutura `Parameters` e funções para processamento de argumentos da linha de comando.
  */
 
@@ -37,4 +37,4 @@ const Parameters parse_args(int argc, char* argv[]);
  */
 bool validate_parameters(const Parameters* params);
 
-#endif // HEADER_FILE_NAME_HPP
+#endif

@@ -1,5 +1,5 @@
-#ifndef CLASSFILE
-#define CLASSFILE
+#ifndef CLASSFILE_HPP
+#define CLASSFILE_HPP
 
 #include <iostream>
 #include <stdio.h>

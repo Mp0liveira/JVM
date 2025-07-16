@@ -11,9 +11,14 @@
 using namespace std;
 
 /**
- * @class Array
+ * @file Array.hpp
  * @brief Representa um objeto de array na JVM.
  *
+ */
+ 
+ /**
+ * @class
+ * @brief 
  * Esta classe modela o comportamento de arrays em Java, armazenando uma sequência
  * de valores homogêneos (todos do mesmo tipo primitivo ou referência).
  * Herda de Object e pode armazenar qualquer tipo definido em ValueType.
@@ -94,4 +99,4 @@ private:
     vector<Value> array_elements;    ///< Vetor com os elementos do array.
 };
 
-#endif // ARRAY_HPP
+#endif
