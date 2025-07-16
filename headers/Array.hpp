@@ -10,46 +10,88 @@
 
 using namespace std;
 
-// Classe que representa um objeto de array da JVM
+/**
+ * @class Array
+ * @brief Representa um objeto de array na JVM.
+ *
+ * Esta classe modela o comportamento de arrays em Java, armazenando uma sequência
+ * de valores homogêneos (todos do mesmo tipo primitivo ou referência).
+ * Herda de Object e pode armazenar qualquer tipo definido em ValueType.
+ */
 class Array : public Object {
 
 public:
-    // Construtor: define o tipo de valor que o array irá armazenar
+    /**
+     * @brief Construtor da classe Array.
+     * @param type Tipo dos elementos que o array irá armazenar.
+     */
     Array(ValueType type);
 
-    // Destrutor
+    /**
+     * @brief Destrutor da classe Array.
+     */
     ~Array();
 
-    // Retorna o tipo do objeto (no caso, ARRAY)
+    /**
+     * @brief Retorna o tipo do objeto (ARRAY).
+     * @return Tipo do objeto (ObjectType::ARRAY).
+     */
     ObjectType object_type();
 
-    // Retorna o tipo dos dados armazenados no array
+    /**
+     * @brief Retorna o tipo dos valores armazenados no array.
+     * @return Tipo dos elementos (ValueType).
+     */
     ValueType array_content_type();
 
-    // Insere um valor no final do array
+    /**
+     * @brief Adiciona um valor ao final do array.
+     * @param value Valor a ser adicionado.
+     */
     void push_value(Value value);
 
-    // Remove o valor em uma posição específica e o retorna
+    /**
+     * @brief Remove e retorna o valor de uma posição específica do array.
+     * @param index Índice do elemento a ser removido.
+     * @return Valor removido.
+     */
     Value remove_at(uint32_t index);
 
-    // Remove o último valor do array e o retorna
+    /**
+     * @brief Remove e retorna o último valor do array.
+     * @return Valor removido do final.
+     */
     Value remove_last();
 
-    // Remove o primeiro valor do array e o retorna
+    /**
+     * @brief Remove e retorna o primeiro valor do array.
+     * @return Valor removido do início.
+     */
     Value remove_first();
 
-    // Retorna o tamanho atual do array
+    /**
+     * @brief Retorna o tamanho atual do array.
+     * @return Quantidade de elementos no array.
+     */
     uint32_t get_size();
 
-    // Retorna o valor armazenado em uma posição específica
+    /**
+     * @brief Retorna o valor armazenado em uma posição específica.
+     * @param index Índice do valor desejado.
+     * @return Valor armazenado na posição.
+     */
     Value get_value(uint32_t index);
 
-    // Altera o valor em uma posição específica
+    /**
+     * @brief Altera o valor armazenado em uma posição específica.
+     * @param index Índice do valor a ser alterado.
+     * @param value Novo valor a ser armazenado.
+     */
     void change_value(uint32_t index, Value value);
 
 private:
-    ValueType array_type;            // Tipo dos valores armazenados
-    vector<Value> array_elements;   // Vetor dinâmico com os elementos do array
+    ValueType array_type;            ///< Tipo dos valores armazenados.
+    vector<Value> array_elements;    ///< Vetor com os elementos do array.
 };
 
 #endif // ARRAY_HPP
