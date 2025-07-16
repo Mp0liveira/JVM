@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Referência do Arquivo headers/ClassFileViewer.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_class_file_viewer_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência do Arquivo ClassFileViewer.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Declara funções para visualização e gravação de informações do arquivo <span class="tt">.class</span> Java.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_base_type_8hpp_source.html">BaseType.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_class_file_8hpp_source.html">ClassFile.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_class_file_reader_8hpp_source.html">ClassFileReader.hpp</a>&quot;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div>
+<p><a href="_class_file_viewer_8hpp_source.html">Ir para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a8ceb568faa5f3aaaf6cd9879d9f9a369" id="r_a8ceb568faa5f3aaaf6cd9879d9f9a369"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ceb568faa5f3aaaf6cd9879d9f9a369">write_class_file</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file, FILE *output)</td></tr>
+<tr class="memdesc:a8ceb568faa5f3aaaf6cd9879d9f9a369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve todas as informações contidas no <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a> para um arquivo de saída.  <br /></td></tr>
+<tr class="memitem:af3fadd9955ce386c75437c470d4c5828" id="r_af3fadd9955ce386c75437c470d4c5828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3fadd9955ce386c75437c470d4c5828">write_general_info</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:af3fadd9955ce386c75437c470d4c5828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve informações gerais do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>, como versão e flags de acesso.  <br /></td></tr>
+<tr class="memitem:ae5930209260ba0fda6ab4ae83fe1b487" id="r_ae5930209260ba0fda6ab4ae83fe1b487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5930209260ba0fda6ab4ae83fe1b487">write_constant_pool</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:ae5930209260ba0fda6ab4ae83fe1b487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve os elementos da Constant Pool do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>.  <br /></td></tr>
+<tr class="memitem:a13e9fef91c2227a7c82c9dfd6781084a" id="r_a13e9fef91c2227a7c82c9dfd6781084a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13e9fef91c2227a7c82c9dfd6781084a">write_interfaces</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:a13e9fef91c2227a7c82c9dfd6781084a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve as interfaces implementadas pela classe.  <br /></td></tr>
+<tr class="memitem:a17698afd14e3b647b6d1cf8e65304a05" id="r_a17698afd14e3b647b6d1cf8e65304a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17698afd14e3b647b6d1cf8e65304a05">write_fields</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:a17698afd14e3b647b6d1cf8e65304a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve os campos declarados na classe.  <br /></td></tr>
+<tr class="memitem:a10eb2437297318d8d27efdb31ab40372" id="r_a10eb2437297318d8d27efdb31ab40372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10eb2437297318d8d27efdb31ab40372">write_methods</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:a10eb2437297318d8d27efdb31ab40372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve os métodos da classe.  <br /></td></tr>
+<tr class="memitem:ab92823d3c27a5e070d54a1ff4e98a74a" id="r_ab92823d3c27a5e070d54a1ff4e98a74a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab92823d3c27a5e070d54a1ff4e98a74a">write_attributes</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:ab92823d3c27a5e070d54a1ff4e98a74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve os atributos globais do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>.  <br /></td></tr>
+<tr class="memitem:ae3a8699120410b0a4d73cc686df6a599" id="r_ae3a8699120410b0a4d73cc686df6a599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a8699120410b0a4d73cc686df6a599">write_attribute_info</a> (<a class="el" href="struct_attribute_info.html">AttributeInfo</a> attribute_info, uint32_t index, <a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> *constant_pool, uint8_t indentation)</td></tr>
+<tr class="memdesc:ae3a8699120410b0a4d73cc686df6a599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve um atributo específico do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>.  <br /></td></tr>
+<tr class="memitem:a4d460966d5f6f9e70665e4234023e423" id="r_a4d460966d5f6f9e70665e4234023e423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d460966d5f6f9e70665e4234023e423">write_file_bytecode</a> (<a class="el" href="struct_code_attribute.html">CodeAttribute</a> code_attribute, <a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> *constant_pool, uint8_t indentation)</td></tr>
+<tr class="memdesc:a4d460966d5f6f9e70665e4234023e423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve o bytecode contido no atributo <a class="el" href="struct_code_attribute.html" title="Atributo Code contendo o código bytecode do método.">CodeAttribute</a>.  <br /></td></tr>
+<tr class="memitem:abbc44a85012248435bf9d2661c21f736" id="r_abbc44a85012248435bf9d2661c21f736"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc44a85012248435bf9d2661c21f736">get_access_flags</a> (<a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> access_flags)</td></tr>
+<tr class="memdesc:abbc44a85012248435bf9d2661c21f736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma string representando os flags de acesso da classe, método ou campo.  <br /></td></tr>
+<tr class="memitem:a0a87f276fefaae241ab654291561bd28" id="r_a0a87f276fefaae241ab654291561bd28"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a87f276fefaae241ab654291561bd28">get_formatted_constant</a> (<a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> *constant_pool, <a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> index)</td></tr>
+<tr class="memdesc:a0a87f276fefaae241ab654291561bd28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma constante formatada da Constant Pool, a partir de um índice.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Declara funções para visualização e gravação de informações do arquivo <span class="tt">.class</span> Java. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funções</h2>
+<a id="abbc44a85012248435bf9d2661c21f736" name="abbc44a85012248435bf9d2661c21f736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc44a85012248435bf9d2661c21f736">&#9670;&#160;</a></span>get_access_flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * get_access_flags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a></td>          <td class="paramname"><span class="paramname"><em>access_flags</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna uma string representando os flags de acesso da classe, método ou campo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">access_flags</td><td>Flags de acesso codificados como <span class="tt"><a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f" title="Inteiro sem sinal de 16 bits.">u2</a></span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>const char* String representando os flags. </dd></dl>
+
+</div>
+</div>
+<a id="a0a87f276fefaae241ab654291561bd28" name="a0a87f276fefaae241ab654291561bd28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a87f276fefaae241ab654291561bd28">&#9670;&#160;</a></span>get_formatted_constant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * get_formatted_constant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> *</td>          <td class="paramname"><span class="paramname"><em>constant_pool</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna uma constante formatada da Constant Pool, a partir de um índice. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">constant_pool</td><td>Ponteiro para a Constant Pool. </td></tr>
+    <tr><td class="paramname">index</td><td>Índice da constante a ser formatada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>const char* Representação em string da constante. </dd></dl>
+
+</div>
+</div>
+<a id="ae3a8699120410b0a4d73cc686df6a599" name="ae3a8699120410b0a4d73cc686df6a599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a8699120410b0a4d73cc686df6a599">&#9670;&#160;</a></span>write_attribute_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_attribute_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_attribute_info.html">AttributeInfo</a></td>          <td class="paramname"><span class="paramname"><em>attribute_info</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> *</td>          <td class="paramname"><span class="paramname"><em>constant_pool</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>indentation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve um atributo específico do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attribute_info</td><td>Estrutura com as informações do atributo. </td></tr>
+    <tr><td class="paramname">index</td><td>Índice do atributo (para identificação). </td></tr>
+    <tr><td class="paramname">constant_pool</td><td>Ponteiro para a Constant Pool. </td></tr>
+    <tr><td class="paramname">indentation</td><td>Nível de indentação para a saída. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab92823d3c27a5e070d54a1ff4e98a74a" name="ab92823d3c27a5e070d54a1ff4e98a74a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab92823d3c27a5e070d54a1ff4e98a74a">&#9670;&#160;</a></span>write_attributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_attributes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve os atributos globais do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ceb568faa5f3aaaf6cd9879d9f9a369" name="a8ceb568faa5f3aaaf6cd9879d9f9a369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ceb568faa5f3aaaf6cd9879d9f9a369">&#9670;&#160;</a></span>write_class_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_class_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>output</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve todas as informações contidas no <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a> para um arquivo de saída. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+    <tr><td class="paramname">output</td><td>Ponteiro para o arquivo de saída. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5930209260ba0fda6ab4ae83fe1b487" name="ae5930209260ba0fda6ab4ae83fe1b487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5930209260ba0fda6ab4ae83fe1b487">&#9670;&#160;</a></span>write_constant_pool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_constant_pool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve os elementos da Constant Pool do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a17698afd14e3b647b6d1cf8e65304a05" name="a17698afd14e3b647b6d1cf8e65304a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17698afd14e3b647b6d1cf8e65304a05">&#9670;&#160;</a></span>write_fields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_fields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve os campos declarados na classe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d460966d5f6f9e70665e4234023e423" name="a4d460966d5f6f9e70665e4234023e423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d460966d5f6f9e70665e4234023e423">&#9670;&#160;</a></span>write_file_bytecode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_file_bytecode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_code_attribute.html">CodeAttribute</a></td>          <td class="paramname"><span class="paramname"><em>code_attribute</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> *</td>          <td class="paramname"><span class="paramname"><em>constant_pool</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>indentation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve o bytecode contido no atributo <a class="el" href="struct_code_attribute.html" title="Atributo Code contendo o código bytecode do método.">CodeAttribute</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code_attribute</td><td>Estrutura com o bytecode. </td></tr>
+    <tr><td class="paramname">constant_pool</td><td>Ponteiro para a Constant Pool. </td></tr>
+    <tr><td class="paramname">indentation</td><td>Nível de indentação para a saída. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af3fadd9955ce386c75437c470d4c5828" name="af3fadd9955ce386c75437c470d4c5828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3fadd9955ce386c75437c470d4c5828">&#9670;&#160;</a></span>write_general_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_general_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve informações gerais do <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>, como versão e flags de acesso. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13e9fef91c2227a7c82c9dfd6781084a" name="a13e9fef91c2227a7c82c9dfd6781084a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e9fef91c2227a7c82c9dfd6781084a">&#9670;&#160;</a></span>write_interfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_interfaces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve as interfaces implementadas pela classe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10eb2437297318d8d27efdb31ab40372" name="a10eb2437297318d8d27efdb31ab40372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10eb2437297318d8d27efdb31ab40372">&#9670;&#160;</a></span>write_methods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_methods </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve os métodos da classe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="_class_file_viewer_8hpp.html">ClassFileViewer.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

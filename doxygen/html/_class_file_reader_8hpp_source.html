@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Código-Fonte de headers/ClassFileReader.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_class_file_reader_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ClassFileReader.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_class_file_reader_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CLASS_FILE_READER_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CLASS_FILE_READER_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_base_type_8hpp.html">BaseType.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_class_file_8hpp.html">ClassFile.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdbool&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_class_file_reader.html">   27</a></span><span class="keyword">class </span>ClassFileReader {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_class_file_reader.html#a1bb622e222d0668791d839a593f20111">   33</a></span>    <span class="keyword">static</span> ClassFileReader&amp; <a class="code hl_function" href="class_class_file_reader.html#a1bb622e222d0668791d839a593f20111">get_instance</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">static</span> ClassFileReader instance;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_class_file_reader.html#a6fb3c4b8b4624f92933c18d7098747bb">   42</a></span>    <a class="code hl_function" href="class_class_file_reader.html#a6fb3c4b8b4624f92933c18d7098747bb">~ClassFileReader</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_class_file_reader.html#a3422d55ee489078d4a8a6b85bf864bd0">   49</a></span>    <a class="code hl_class" href="class_class_file.html">ClassFile</a>* <a class="code hl_function" href="class_class_file_reader.html#a3422d55ee489078d4a8a6b85bf864bd0">read_class_file</a>(FILE* file);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ClassFileReader();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    ClassFileReader(ClassFileReader <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> is_little_endian; </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">bool</span> check_endian_type();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_typedef" href="_base_type_8hpp.html#ad9f4cdb6757615aae2fad89dab3c5470">u1</a> read_u1(FILE* file);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> read_u2(FILE* file);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_typedef" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a> read_u4(FILE* file);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> set_magic(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">bool</span> check_magic_valid(<a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> set_version(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">bool</span> is_version_valid(<a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file, uint16_t major);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> set_constant_pool_size(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> set_constant_pool(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">// --- Leitura de entradas específicas da constant pool ---</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_struct" href="struct_const_class_info.html">ConstClassInfo</a> get_const_class_info(FILE* fp);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_struct" href="struct_const_field_ref_info.html">ConstFieldRefInfo</a> get_const_field_ref_info(FILE* fp);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_struct" href="struct_const_method_ref_info.html">ConstMethodRefInfo</a> get_const_method_ref_info(FILE* fp);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_struct" href="struct_const_interface_method_ref_info.html">ConstInterfaceMethodRefInfo</a> get_const_interface_method_ref_info(FILE* fp);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_struct" href="struct_const_str_info.html">ConstStrInfo</a> get_const_str_info(FILE* fp);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_struct" href="struct_const_int_info.html">ConstIntInfo</a> get_const_int_info(FILE* fp);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_struct" href="struct_const_float_info.html">ConstFloatInfo</a> get_const_float_info(FILE* fp);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_struct" href="struct_const_long_info.html">ConstLongInfo</a> get_const_long_info(FILE* fp);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_struct" href="struct_const_double_info.html">ConstDoubleInfo</a> get_const_double_info(FILE* fp);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_struct" href="struct_const_name_type_info.html">ConstNameTypeInfo</a> get_const_name_type_info(FILE* fp);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_struct" href="struct_const_utf8_info.html">ConstUtf8Info</a> get_const_utf8_info(FILE* fp);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// --- Leitura de metadados da classe ---</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">void</span> set_access_flags(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">void</span> set_this_class(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">void</span> set_super_class(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">void</span> set_interfaces_count(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">void</span> set_interfaces(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordtype">void</span> set_fields_count(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">void</span> set_fields(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="comment">// --- Leitura de atributos ---</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <a class="code hl_struct" href="struct_attribute_info.html">AttributeInfo</a> get_attribute_info(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_struct" href="struct_const_value_attribute.html">ConstValueAttribute</a> get_attribute_constant_value(FILE* fp);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_struct" href="struct_exception_table.html">ExceptionTable</a> get_exception_table(FILE* fp);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_struct" href="struct_code_attribute.html">CodeAttribute</a> get_attribute_code(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_struct" href="struct_exceptions_attribute.html">ExceptionsAttribute</a> get_attribute_exceptions(FILE* fp);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_struct" href="struct_class.html">Class</a> get_class(FILE* fp);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_struct" href="struct_inner_classes_attribute.html">InnerClassesAttribute</a> get_attribute_inner_classes(FILE* fp);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_struct" href="struct_synthetic_attribute.html">SyntheticAttribute</a> get_attribute_synthetic();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_struct" href="struct_source_file_attribute.html">SourceFileAttribute</a> get_attribute_source_file(FILE* fp);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_struct" href="struct_line_number_table.html">LineNumberTable</a> get_line_number_table(FILE* fp);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_struct" href="struct_line_number_table_attribute.html">LineNumberTableAttribute</a> get_attribute_line_number_table(FILE* fp);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <a class="code hl_struct" href="struct_local_variable_table.html">LocalVariableTable</a> get_local_variable_table(FILE* fp);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <a class="code hl_struct" href="struct_local_variable_table_attribute.html">LocalVariableTableAttribute</a> get_attribute_local_variable(FILE* fp);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_struct" href="struct_deprecated_attribute.html">DeprecatedAttribute</a> get_attribute_deprecated();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_struct" href="struct_const_utf8_info.html">ConstUtf8Info</a> get_utf8_from_constant_pool(<a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> index, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="comment">// --- Leitura de métodos e seus atributos ---</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordtype">void</span> set_methods(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordtype">void</span> set_methods_count(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">void</span> set_attributes(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">void</span> set_attributes_count(FILE* fp, <a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> free_class_file(<a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>};</div>
+</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#endif </span><span class="comment">// CLASS_FILE_READER_HPP</span></div>
+<div class="ttc" id="a_base_type_8hpp_html"><div class="ttname"><a href="_base_type_8hpp.html">BaseType.hpp</a></div><div class="ttdoc">Define os tipos básicos e estruturas essenciais para a JVM.</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_a732cde1300aafb73b0ea6c2558a7a54f"><div class="ttname"><a href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a></div><div class="ttdeci">uint16_t u2</div><div class="ttdoc">Inteiro sem sinal de 16 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:21</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_ad9f4cdb6757615aae2fad89dab3c5470"><div class="ttname"><a href="_base_type_8hpp.html#ad9f4cdb6757615aae2fad89dab3c5470">u1</a></div><div class="ttdeci">uint8_t u1</div><div class="ttdoc">Inteiro sem sinal de 8 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:15</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_ae5be1f726785414dd1b77d60df074c9d"><div class="ttname"><a href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a></div><div class="ttdeci">uint32_t u4</div><div class="ttdoc">Inteiro sem sinal de 32 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:27</div></div>
+<div class="ttc" id="a_class_file_8hpp_html"><div class="ttname"><a href="_class_file_8hpp.html">ClassFile.hpp</a></div><div class="ttdoc">Define a estrutura principal que representa um arquivo .class Java.</div></div>
+<div class="ttc" id="aclass_class_file_html"><div class="ttname"><a href="class_class_file.html">ClassFile</a></div><div class="ttdoc">Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:25</div></div>
+<div class="ttc" id="aclass_class_file_reader_html_a1bb622e222d0668791d839a593f20111"><div class="ttname"><a href="class_class_file_reader.html#a1bb622e222d0668791d839a593f20111">ClassFileReader::get_instance</a></div><div class="ttdeci">static ClassFileReader &amp; get_instance()</div><div class="ttdoc">Retorna a instância única do leitor de arquivos .class.</div><div class="ttdef"><b>Definição</b> ClassFileReader.hpp:33</div></div>
+<div class="ttc" id="aclass_class_file_reader_html_a3422d55ee489078d4a8a6b85bf864bd0"><div class="ttname"><a href="class_class_file_reader.html#a3422d55ee489078d4a8a6b85bf864bd0">ClassFileReader::read_class_file</a></div><div class="ttdeci">ClassFile * read_class_file(FILE *file)</div><div class="ttdoc">Lê um arquivo .class e retorna sua representação interna.</div></div>
+<div class="ttc" id="aclass_class_file_reader_html_a6fb3c4b8b4624f92933c18d7098747bb"><div class="ttname"><a href="class_class_file_reader.html#a6fb3c4b8b4624f92933c18d7098747bb">ClassFileReader::~ClassFileReader</a></div><div class="ttdeci">~ClassFileReader()</div><div class="ttdoc">Destrutor.</div></div>
+<div class="ttc" id="astruct_attribute_info_html"><div class="ttname"><a href="struct_attribute_info.html">AttributeInfo</a></div><div class="ttdoc">Estrutura genérica para atributos do classfile.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:417</div></div>
+<div class="ttc" id="astruct_class_html"><div class="ttname"><a href="struct_class.html">Class</a></div><div class="ttdoc">Entrada da lista de classes internas.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:332</div></div>
+<div class="ttc" id="astruct_code_attribute_html"><div class="ttname"><a href="struct_code_attribute.html">CodeAttribute</a></div><div class="ttdoc">Atributo Code contendo o código bytecode do método.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:308</div></div>
+<div class="ttc" id="astruct_const_class_info_html"><div class="ttname"><a href="struct_const_class_info.html">ConstClassInfo</a></div><div class="ttdoc">Informação de constante do tipo Classe.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:173</div></div>
+<div class="ttc" id="astruct_const_double_info_html"><div class="ttname"><a href="struct_const_double_info.html">ConstDoubleInfo</a></div><div class="ttdoc">Informação de constante Double.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:241</div></div>
+<div class="ttc" id="astruct_const_field_ref_info_html"><div class="ttname"><a href="struct_const_field_ref_info.html">ConstFieldRefInfo</a></div><div class="ttdoc">Informação de constante FieldRef.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:181</div></div>
+<div class="ttc" id="astruct_const_float_info_html"><div class="ttname"><a href="struct_const_float_info.html">ConstFloatInfo</a></div><div class="ttdoc">Informação de constante Float.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:224</div></div>
+<div class="ttc" id="astruct_const_int_info_html"><div class="ttname"><a href="struct_const_int_info.html">ConstIntInfo</a></div><div class="ttdoc">Informação de constante Integer.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:216</div></div>
+<div class="ttc" id="astruct_const_interface_method_ref_info_html"><div class="ttname"><a href="struct_const_interface_method_ref_info.html">ConstInterfaceMethodRefInfo</a></div><div class="ttdoc">Informação de constante InterfaceMethodRef.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:199</div></div>
+<div class="ttc" id="astruct_const_long_info_html"><div class="ttname"><a href="struct_const_long_info.html">ConstLongInfo</a></div><div class="ttdoc">Informação de constante Long.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:232</div></div>
+<div class="ttc" id="astruct_const_method_ref_info_html"><div class="ttname"><a href="struct_const_method_ref_info.html">ConstMethodRefInfo</a></div><div class="ttdoc">Informação de constante MethodRef.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:190</div></div>
+<div class="ttc" id="astruct_const_name_type_info_html"><div class="ttname"><a href="struct_const_name_type_info.html">ConstNameTypeInfo</a></div><div class="ttdoc">Informação de constante NameAndType.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:250</div></div>
+<div class="ttc" id="astruct_const_str_info_html"><div class="ttname"><a href="struct_const_str_info.html">ConstStrInfo</a></div><div class="ttdoc">Informação de constante String.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:208</div></div>
+<div class="ttc" id="astruct_const_utf8_info_html"><div class="ttname"><a href="struct_const_utf8_info.html">ConstUtf8Info</a></div><div class="ttdoc">Informação de constante UTF8.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:259</div></div>
+<div class="ttc" id="astruct_const_value_attribute_html"><div class="ttname"><a href="struct_const_value_attribute.html">ConstValueAttribute</a></div><div class="ttdoc">Atributo que contém valor constante.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:289</div></div>
+<div class="ttc" id="astruct_deprecated_attribute_html"><div class="ttname"><a href="struct_deprecated_attribute.html">DeprecatedAttribute</a></div><div class="ttdoc">Atributo Deprecated (vazio).</div><div class="ttdef"><b>Definição</b> BaseType.hpp:405</div></div>
+<div class="ttc" id="astruct_exception_table_html"><div class="ttname"><a href="struct_exception_table.html">ExceptionTable</a></div><div class="ttdoc">Entrada da tabela de exceções do atributo Code.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:297</div></div>
+<div class="ttc" id="astruct_exceptions_attribute_html"><div class="ttname"><a href="struct_exceptions_attribute.html">ExceptionsAttribute</a></div><div class="ttdoc">Atributo Exceptions que lista exceções lançadas.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:323</div></div>
+<div class="ttc" id="astruct_inner_classes_attribute_html"><div class="ttname"><a href="struct_inner_classes_attribute.html">InnerClassesAttribute</a></div><div class="ttdoc">Atributo contendo classes internas.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:343</div></div>
+<div class="ttc" id="astruct_line_number_table_attribute_html"><div class="ttname"><a href="struct_line_number_table_attribute.html">LineNumberTableAttribute</a></div><div class="ttdoc">Atributo que contém a tabela de números de linha.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:375</div></div>
+<div class="ttc" id="astruct_line_number_table_html"><div class="ttname"><a href="struct_line_number_table.html">LineNumberTable</a></div><div class="ttdoc">Entrada da tabela de número de linhas.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:366</div></div>
+<div class="ttc" id="astruct_local_variable_table_attribute_html"><div class="ttname"><a href="struct_local_variable_table_attribute.html">LocalVariableTableAttribute</a></div><div class="ttdoc">Atributo que contém a tabela de variáveis locais.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:396</div></div>
+<div class="ttc" id="astruct_local_variable_table_html"><div class="ttname"><a href="struct_local_variable_table.html">LocalVariableTable</a></div><div class="ttdoc">Entrada da tabela de variáveis locais.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:384</div></div>
+<div class="ttc" id="astruct_source_file_attribute_html"><div class="ttname"><a href="struct_source_file_attribute.html">SourceFileAttribute</a></div><div class="ttdoc">Atributo com informação do arquivo fonte.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:358</div></div>
+<div class="ttc" id="astruct_synthetic_attribute_html"><div class="ttname"><a href="struct_synthetic_attribute.html">SyntheticAttribute</a></div><div class="ttdoc">Atributo sintético (vazio).</div><div class="ttdef"><b>Definição</b> BaseType.hpp:352</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="_class_file_reader_8hpp.html">ClassFileReader.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

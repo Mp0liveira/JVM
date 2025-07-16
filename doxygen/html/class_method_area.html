@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Referência da Classe MethodArea</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_method_area.html','','class_method_area-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência da Classe MethodArea</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Representa a área de métodos da JVM, responsável por armazenar classes carregadas.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_method_area_8hpp_source.html">MethodArea.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a79edf80f07f068f918907d8e2a3508b7" id="r_a79edf80f07f068f918907d8e2a3508b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79edf80f07f068f918907d8e2a3508b7">~MethodArea</a> ()</td></tr>
+<tr class="memdesc:a79edf80f07f068f918907d8e2a3508b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da <a class="el" href="class_method_area.html" title="Representa a área de métodos da JVM, responsável por armazenar classes carregadas.">MethodArea</a>.  <br /></td></tr>
+<tr class="memitem:a6dd6f3eecb2a681e9b1c9faeb792b20c" id="r_a6dd6f3eecb2a681e9b1c9faeb792b20c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_static_class.html">StaticClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dd6f3eecb2a681e9b1c9faeb792b20c">load_class</a> (const string &amp;class_name)</td></tr>
+<tr class="memdesc:a6dd6f3eecb2a681e9b1c9faeb792b20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega uma classe a partir do nome, se ainda não estiver carregada.  <br /></td></tr>
+<tr class="memitem:aacdd083a69638af84979ae5afbf4397a" id="r_aacdd083a69638af84979ae5afbf4397a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_static_class.html">StaticClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacdd083a69638af84979ae5afbf4397a">get_class</a> (const string &amp;class_name)</td></tr>
+<tr class="memdesc:aacdd083a69638af84979ae5afbf4397a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma classe já carregada a partir do nome.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Membros públicos estáticos</h2></td></tr>
+<tr class="memitem:af2a2bb963323dfadce29d196a6883f4f" id="r_af2a2bb963323dfadce29d196a6883f4f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_method_area.html">MethodArea</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2a2bb963323dfadce29d196a6883f4f">get_instance</a> ()</td></tr>
+<tr class="memdesc:af2a2bb963323dfadce29d196a6883f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a instância única da <a class="el" href="class_method_area.html" title="Representa a área de métodos da JVM, responsável por armazenar classes carregadas.">MethodArea</a> (Singleton).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:a46b70f054280a2fac628920d05fe0793" id="r_a46b70f054280a2fac628920d05fe0793"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b70f054280a2fac628920d05fe0793">class_path</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:a46b70f054280a2fac628920d05fe0793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caminho base onde os arquivos <span class="tt">.class</span> são procurados.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Representa a área de métodos da JVM, responsável por armazenar classes carregadas. </p>
+<p>Implementa o padrão Singleton. A <a class="el" href="class_method_area.html" title="Representa a área de métodos da JVM, responsável por armazenar classes carregadas.">MethodArea</a> mantém um mapa de classes carregadas, permitindo buscar ou carregar classes com base em seus nomes. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Construtores e Destrutores</h2>
+<a id="a79edf80f07f068f918907d8e2a3508b7" name="a79edf80f07f068f918907d8e2a3508b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79edf80f07f068f918907d8e2a3508b7">&#9670;&#160;</a></span>~MethodArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MethodArea::~MethodArea </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor da <a class="el" href="class_method_area.html" title="Representa a área de métodos da JVM, responsável por armazenar classes carregadas.">MethodArea</a>. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="aacdd083a69638af84979ae5afbf4397a" name="aacdd083a69638af84979ae5afbf4397a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacdd083a69638af84979ae5afbf4397a">&#9670;&#160;</a></span>get_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_static_class.html">StaticClass</a> * MethodArea::get_class </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>class_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna uma classe já carregada a partir do nome. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_name</td><td>Nome da classe. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Ponteiro para a <a class="el" href="class_static_class.html">StaticClass</a> correspondente, ou nullptr se não encontrada. </dd></dl>
+
+</div>
+</div>
+<a id="af2a2bb963323dfadce29d196a6883f4f" name="af2a2bb963323dfadce29d196a6883f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a2bb963323dfadce29d196a6883f4f">&#9670;&#160;</a></span>get_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_method_area.html">MethodArea</a> &amp; MethodArea::get_instance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna a instância única da <a class="el" href="class_method_area.html" title="Representa a área de métodos da JVM, responsável por armazenar classes carregadas.">MethodArea</a> (Singleton). </p>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a instância da <a class="el" href="class_method_area.html" title="Representa a área de métodos da JVM, responsável por armazenar classes carregadas.">MethodArea</a>. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keyword">static</span> MethodArea instance; <span class="comment">// Singleton</span></div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6dd6f3eecb2a681e9b1c9faeb792b20c" name="a6dd6f3eecb2a681e9b1c9faeb792b20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd6f3eecb2a681e9b1c9faeb792b20c">&#9670;&#160;</a></span>load_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_static_class.html">StaticClass</a> * MethodArea::load_class </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>class_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carrega uma classe a partir do nome, se ainda não estiver carregada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_name</td><td>Nome da classe a ser carregada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Ponteiro para a classe carregada (StaticClass*). </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Atributos</h2>
+<a id="a46b70f054280a2fac628920d05fe0793" name="a46b70f054280a2fac628920d05fe0793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b70f054280a2fac628920d05fe0793">&#9670;&#160;</a></span>class_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MethodArea::class_path = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Caminho base onde os arquivos <span class="tt">.class</span> são procurados. </p>
+<p>Deve ser configurado antes de chamar <span class="tt"><a class="el" href="#a6dd6f3eecb2a681e9b1c9faeb792b20c" title="Carrega uma classe a partir do nome, se ainda não estiver carregada.">load_class()</a></span>. </p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>headers/<a class="el" href="_method_area_8hpp_source.html">MethodArea.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_method_area.html">MethodArea</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

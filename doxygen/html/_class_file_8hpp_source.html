@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Código-Fonte de headers/ClassFile.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_class_file_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ClassFile.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_class_file_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CLASSFILE_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CLASSFILE_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_base_type_8hpp.html">BaseType.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_class_file.html">   25</a></span><span class="keyword">class </span><a class="code hl_function" href="class_class_file.html#a47669d90346c9fa0db30ae582c74a199">ClassFile</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_class_file.html#a47669d90346c9fa0db30ae582c74a199">   30</a></span>    <a class="code hl_function" href="class_class_file.html#a47669d90346c9fa0db30ae582c74a199">ClassFile</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_class_file.html#a09085e9db513dae2f46da6e0a26c1b59">   32</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a> <a class="code hl_variable" href="class_class_file.html#a09085e9db513dae2f46da6e0a26c1b59">magic</a>;                     </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_class_file.html#af0db7b0ea01cb9cea2cee177ca81df09">   33</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#af0db7b0ea01cb9cea2cee177ca81df09">minor_version</a>;             </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_class_file.html#abede9cb937e65072517d0ee6e26e2757">   34</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#abede9cb937e65072517d0ee6e26e2757">major_version</a>;             </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_class_file.html#ac8fdf5cccfd632da4fdb21ae63fffa7a">   35</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#ac8fdf5cccfd632da4fdb21ae63fffa7a">constant_pool_count</a>;       </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_class_file.html#a963da44ac519eee912c0018eed9f71cf">   36</a></span>    <a class="code hl_struct" href="struct_constant_pool_info.html">ConstantPoolInfo</a>* <a class="code hl_variable" href="class_class_file.html#a963da44ac519eee912c0018eed9f71cf">constant_pool</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_class_file.html#ae88db578147f7ee0d6fc1aeacb341854">   37</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#ae88db578147f7ee0d6fc1aeacb341854">access_flags</a>;              </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_class_file.html#a2d33db0a560a71b94bc572dd1e4ec03a">   38</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#a2d33db0a560a71b94bc572dd1e4ec03a">this_class</a>;                </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_class_file.html#a5f6c11c0ccb02fd992b5c102725253ec">   39</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#a5f6c11c0ccb02fd992b5c102725253ec">super_class</a>;               </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_class_file.html#a337fcb7da33d1b64631441115c7de305">   40</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#a337fcb7da33d1b64631441115c7de305">interfaces_count</a>;          </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_class_file.html#af599de97e062c98966470f1590496425">   41</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a>* <a class="code hl_variable" href="class_class_file.html#af599de97e062c98966470f1590496425">interfaces</a>;               </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_class_file.html#acea207ee523fbc16611d3cf436c390e0">   42</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#acea207ee523fbc16611d3cf436c390e0">fields_count</a>;              </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_class_file.html#add171dc12613ad29ef94f4f18a50f06a">   43</a></span>    <a class="code hl_struct" href="struct_field_info.html">FieldInfo</a>* <a class="code hl_variable" href="class_class_file.html#add171dc12613ad29ef94f4f18a50f06a">fields</a>;            </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_class_file.html#aacfb45d4af64216324b1ae5269c870d5">   44</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#aacfb45d4af64216324b1ae5269c870d5">methods_count</a>;             </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_class_file.html#a67e02d50e6807bb97d7d8f265deef9a0">   45</a></span>    <a class="code hl_struct" href="struct_method_info.html">MethodInfo</a>* <a class="code hl_variable" href="class_class_file.html#a67e02d50e6807bb97d7d8f265deef9a0">methods</a>;          </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_class_file.html#a633c696fbe08e7e7906b2ab1e52f3d1b">   46</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_variable" href="class_class_file.html#a633c696fbe08e7e7906b2ab1e52f3d1b">attributes_count</a>;          </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_class_file.html#ad7db56de00dc682671cb8cfb837d92b7">   47</a></span>    <a class="code hl_struct" href="struct_attribute_info.html">AttributeInfo</a>* <a class="code hl_variable" href="class_class_file.html#ad7db56de00dc682671cb8cfb837d92b7">attributes</a>;    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// CLASSFILE</span></div>
+<div class="ttc" id="a_base_type_8hpp_html"><div class="ttname"><a href="_base_type_8hpp.html">BaseType.hpp</a></div><div class="ttdoc">Define os tipos básicos e estruturas essenciais para a JVM.</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_a732cde1300aafb73b0ea6c2558a7a54f"><div class="ttname"><a href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a></div><div class="ttdeci">uint16_t u2</div><div class="ttdoc">Inteiro sem sinal de 16 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:21</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_ae5be1f726785414dd1b77d60df074c9d"><div class="ttname"><a href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a></div><div class="ttdeci">uint32_t u4</div><div class="ttdoc">Inteiro sem sinal de 32 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:27</div></div>
+<div class="ttc" id="aclass_class_file_html_a09085e9db513dae2f46da6e0a26c1b59"><div class="ttname"><a href="class_class_file.html#a09085e9db513dae2f46da6e0a26c1b59">ClassFile::magic</a></div><div class="ttdeci">u4 magic</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:32</div></div>
+<div class="ttc" id="aclass_class_file_html_a2d33db0a560a71b94bc572dd1e4ec03a"><div class="ttname"><a href="class_class_file.html#a2d33db0a560a71b94bc572dd1e4ec03a">ClassFile::this_class</a></div><div class="ttdeci">u2 this_class</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:38</div></div>
+<div class="ttc" id="aclass_class_file_html_a337fcb7da33d1b64631441115c7de305"><div class="ttname"><a href="class_class_file.html#a337fcb7da33d1b64631441115c7de305">ClassFile::interfaces_count</a></div><div class="ttdeci">u2 interfaces_count</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:40</div></div>
+<div class="ttc" id="aclass_class_file_html_a47669d90346c9fa0db30ae582c74a199"><div class="ttname"><a href="class_class_file.html#a47669d90346c9fa0db30ae582c74a199">ClassFile::ClassFile</a></div><div class="ttdeci">ClassFile()</div><div class="ttdoc">Construtor padrão.</div></div>
+<div class="ttc" id="aclass_class_file_html_a5f6c11c0ccb02fd992b5c102725253ec"><div class="ttname"><a href="class_class_file.html#a5f6c11c0ccb02fd992b5c102725253ec">ClassFile::super_class</a></div><div class="ttdeci">u2 super_class</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:39</div></div>
+<div class="ttc" id="aclass_class_file_html_a633c696fbe08e7e7906b2ab1e52f3d1b"><div class="ttname"><a href="class_class_file.html#a633c696fbe08e7e7906b2ab1e52f3d1b">ClassFile::attributes_count</a></div><div class="ttdeci">u2 attributes_count</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:46</div></div>
+<div class="ttc" id="aclass_class_file_html_a67e02d50e6807bb97d7d8f265deef9a0"><div class="ttname"><a href="class_class_file.html#a67e02d50e6807bb97d7d8f265deef9a0">ClassFile::methods</a></div><div class="ttdeci">MethodInfo * methods</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:45</div></div>
+<div class="ttc" id="aclass_class_file_html_a963da44ac519eee912c0018eed9f71cf"><div class="ttname"><a href="class_class_file.html#a963da44ac519eee912c0018eed9f71cf">ClassFile::constant_pool</a></div><div class="ttdeci">ConstantPoolInfo * constant_pool</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:36</div></div>
+<div class="ttc" id="aclass_class_file_html_aacfb45d4af64216324b1ae5269c870d5"><div class="ttname"><a href="class_class_file.html#aacfb45d4af64216324b1ae5269c870d5">ClassFile::methods_count</a></div><div class="ttdeci">u2 methods_count</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:44</div></div>
+<div class="ttc" id="aclass_class_file_html_abede9cb937e65072517d0ee6e26e2757"><div class="ttname"><a href="class_class_file.html#abede9cb937e65072517d0ee6e26e2757">ClassFile::major_version</a></div><div class="ttdeci">u2 major_version</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:34</div></div>
+<div class="ttc" id="aclass_class_file_html_ac8fdf5cccfd632da4fdb21ae63fffa7a"><div class="ttname"><a href="class_class_file.html#ac8fdf5cccfd632da4fdb21ae63fffa7a">ClassFile::constant_pool_count</a></div><div class="ttdeci">u2 constant_pool_count</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:35</div></div>
+<div class="ttc" id="aclass_class_file_html_acea207ee523fbc16611d3cf436c390e0"><div class="ttname"><a href="class_class_file.html#acea207ee523fbc16611d3cf436c390e0">ClassFile::fields_count</a></div><div class="ttdeci">u2 fields_count</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:42</div></div>
+<div class="ttc" id="aclass_class_file_html_ad7db56de00dc682671cb8cfb837d92b7"><div class="ttname"><a href="class_class_file.html#ad7db56de00dc682671cb8cfb837d92b7">ClassFile::attributes</a></div><div class="ttdeci">AttributeInfo * attributes</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:47</div></div>
+<div class="ttc" id="aclass_class_file_html_add171dc12613ad29ef94f4f18a50f06a"><div class="ttname"><a href="class_class_file.html#add171dc12613ad29ef94f4f18a50f06a">ClassFile::fields</a></div><div class="ttdeci">FieldInfo * fields</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:43</div></div>
+<div class="ttc" id="aclass_class_file_html_ae88db578147f7ee0d6fc1aeacb341854"><div class="ttname"><a href="class_class_file.html#ae88db578147f7ee0d6fc1aeacb341854">ClassFile::access_flags</a></div><div class="ttdeci">u2 access_flags</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:37</div></div>
+<div class="ttc" id="aclass_class_file_html_af0db7b0ea01cb9cea2cee177ca81df09"><div class="ttname"><a href="class_class_file.html#af0db7b0ea01cb9cea2cee177ca81df09">ClassFile::minor_version</a></div><div class="ttdeci">u2 minor_version</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:33</div></div>
+<div class="ttc" id="aclass_class_file_html_af599de97e062c98966470f1590496425"><div class="ttname"><a href="class_class_file.html#af599de97e062c98966470f1590496425">ClassFile::interfaces</a></div><div class="ttdeci">u2 * interfaces</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:41</div></div>
+<div class="ttc" id="astruct_attribute_info_html"><div class="ttname"><a href="struct_attribute_info.html">AttributeInfo</a></div><div class="ttdoc">Estrutura genérica para atributos do classfile.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:417</div></div>
+<div class="ttc" id="astruct_constant_pool_info_html"><div class="ttname"><a href="struct_constant_pool_info.html">ConstantPoolInfo</a></div><div class="ttdoc">Entrada genérica da constant pool.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:268</div></div>
+<div class="ttc" id="astruct_field_info_html"><div class="ttname"><a href="struct_field_info.html">FieldInfo</a></div><div class="ttdoc">Representa um campo (field) de uma classe Java.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:130</div></div>
+<div class="ttc" id="astruct_method_info_html"><div class="ttname"><a href="struct_method_info.html">MethodInfo</a></div><div class="ttdoc">Representa um método de uma classe Java.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:142</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="_class_file_8hpp.html">ClassFile.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

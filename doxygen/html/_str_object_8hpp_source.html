@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Código-Fonte de headers/StrObject.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_str_object_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StrObject.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_str_object_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef STR_OBJECT_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define STR_OBJECT_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_object_8hpp.html">Object.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_str_object.html">   21</a></span><span class="keyword">class </span><a class="code hl_function" href="class_str_object.html#afa9f15c78db2524c20f5d9433158285c">StrObject</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_object.html">Object</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_str_object.html#afa9f15c78db2524c20f5d9433158285c">   28</a></span>    <a class="code hl_function" href="class_str_object.html#afa9f15c78db2524c20f5d9433158285c">StrObject</a>(<span class="keywordtype">string</span> s = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_str_object.html#acde417fcfdb0d5a37619108fff14bcd0">   35</a></span>    <a class="code hl_function" href="class_str_object.html#acde417fcfdb0d5a37619108fff14bcd0">~StrObject</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_str_object.html#aad63cd4a5ec5790dff6b2daffa368e42">   44</a></span>    <a class="code hl_enumeration" href="_base_type_8hpp.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> <a class="code hl_function" href="class_str_object.html#aad63cd4a5ec5790dff6b2daffa368e42">object_type</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_str_object.html#a6af503c75ea22a87da1ba912eb40f02e">   50</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_str_object.html#a6af503c75ea22a87da1ba912eb40f02e">get_str</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_str_object.html#a464e1b8bdd927272e011b810b830cf69">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_str_object.html#a464e1b8bdd927272e011b810b830cf69">set_str</a>(<span class="keywordtype">string</span> s);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">string</span> internal_str;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">// STR_OBJECT_HPP</span></div>
+<div class="ttc" id="a_base_type_8hpp_html_a842c5e2e69277690b064bf363c017980"><div class="ttname"><a href="_base_type_8hpp.html#a842c5e2e69277690b064bf363c017980">ObjectType</a></div><div class="ttdeci">ObjectType</div><div class="ttdoc">Tipos possíveis para objetos na JVM.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:33</div></div>
+<div class="ttc" id="a_object_8hpp_html"><div class="ttname"><a href="_object_8hpp.html">Object.hpp</a></div><div class="ttdoc">Define a classe base abstrata Object, usada para representar qualquer objeto manipulável pela JVM.</div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Classe base abstrata para todos os objetos na JVM.</div><div class="ttdef"><b>Definição</b> Object.hpp:18</div></div>
+<div class="ttc" id="aclass_str_object_html_a464e1b8bdd927272e011b810b830cf69"><div class="ttname"><a href="class_str_object.html#a464e1b8bdd927272e011b810b830cf69">StrObject::set_str</a></div><div class="ttdeci">void set_str(string s)</div><div class="ttdoc">Define ou atualiza o valor da string armazenada.</div></div>
+<div class="ttc" id="aclass_str_object_html_a6af503c75ea22a87da1ba912eb40f02e"><div class="ttname"><a href="class_str_object.html#a6af503c75ea22a87da1ba912eb40f02e">StrObject::get_str</a></div><div class="ttdeci">string get_str()</div><div class="ttdoc">Retorna o conteúdo atual da string armazenada.</div></div>
+<div class="ttc" id="aclass_str_object_html_aad63cd4a5ec5790dff6b2daffa368e42"><div class="ttname"><a href="class_str_object.html#aad63cd4a5ec5790dff6b2daffa368e42">StrObject::object_type</a></div><div class="ttdeci">ObjectType object_type()</div><div class="ttdoc">Retorna o tipo do objeto.</div></div>
+<div class="ttc" id="aclass_str_object_html_acde417fcfdb0d5a37619108fff14bcd0"><div class="ttname"><a href="class_str_object.html#acde417fcfdb0d5a37619108fff14bcd0">StrObject::~StrObject</a></div><div class="ttdeci">~StrObject()</div><div class="ttdoc">Destrutor da classe.</div></div>
+<div class="ttc" id="aclass_str_object_html_afa9f15c78db2524c20f5d9433158285c"><div class="ttname"><a href="class_str_object.html#afa9f15c78db2524c20f5d9433158285c">StrObject::StrObject</a></div><div class="ttdeci">StrObject(string s=&quot;&quot;)</div><div class="ttdoc">Construtor que inicializa o objeto com uma string opcional.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="_str_object_8hpp.html">StrObject.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

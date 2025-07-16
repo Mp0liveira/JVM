@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Código-Fonte de headers/ClassFileUtils.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_class_file_utils_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ClassFileUtils.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_class_file_utils_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CLASS_FILE_UTILS_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CLASS_FILE_UTILS_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_base_type_8hpp.html">BaseType.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_class_file_reader_8hpp.html">ClassFileReader.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_class_file_utils.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_class_file_utils.html">ClassFileUtils</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#aef3a16c04bd90f6ef363bfaece6fa12a">   30</a></span>    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_class_file_utils.html#aef3a16c04bd90f6ef363bfaece6fa12a">return_version</a>(<a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file); <span class="comment">// check_version</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#acac6a19470342ef3fb613e71c10b42ec">   40</a></span>    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_class_file_utils.html#acac6a19470342ef3fb613e71c10b42ec">non_suported_version</a>(<a class="code hl_class" href="class_class_file.html">ClassFile</a>* class_file); <span class="comment">// verify_class_version</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#a4cf48fa07867bd54b358eda3ba5c7a82">   50</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_class_file_utils.html#a4cf48fa07867bd54b358eda3ba5c7a82">compare_utf8_str</a>(<a class="code hl_struct" href="struct_const_utf8_info.html">ConstUtf8Info</a> constant, <span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#aa1aba25198f0371e47f27a7f792a485f">   60</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_class_file_utils.html#aa1aba25198f0371e47f27a7f792a485f">verify_classfile_name</a>(<span class="keywordtype">string</span> filename, <span class="keywordtype">string</span> classname); <span class="comment">// check_this_class</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#a073dedabdedd54ff547f2346ef1c1e06">   70</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="class_class_file_utils.html#a073dedabdedd54ff547f2346ef1c1e06">stream_to_cstring</a>(<span class="keyword">const</span> stringstream&amp; ss);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#a97095d53243fb4e5a3fce25a453e7a48">   78</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_class_file_utils.html#a97095d53243fb4e5a3fce25a453e7a48">file_indent</a>(FILE* out, uint8_t n);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_class_file_utils.html#a75e4c52e7183c258f07dd3ce7a9f2c68">   87</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_class_file_utils.html#a75e4c52e7183c258f07dd3ce7a9f2c68">display_indent</a>(uint8_t n);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_base_type_8hpp_html"><div class="ttname"><a href="_base_type_8hpp.html">BaseType.hpp</a></div><div class="ttdoc">Define os tipos básicos e estruturas essenciais para a JVM.</div></div>
+<div class="ttc" id="a_class_file_reader_8hpp_html"><div class="ttname"><a href="_class_file_reader_8hpp.html">ClassFileReader.hpp</a></div><div class="ttdoc">Declara a classe ClassFileReader responsável por interpretar arquivos .class da linguagem Java.</div></div>
+<div class="ttc" id="aclass_class_file_html"><div class="ttname"><a href="class_class_file.html">ClassFile</a></div><div class="ttdoc">Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...</div><div class="ttdef"><b>Definição</b> ClassFile.hpp:25</div></div>
+<div class="ttc" id="aclass_class_file_utils_html"><div class="ttname"><a href="class_class_file_utils.html">ClassFileUtils</a></div><div class="ttdef"><b>Definição</b> ClassFileUtils.hpp:19</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_a073dedabdedd54ff547f2346ef1c1e06"><div class="ttname"><a href="class_class_file_utils.html#a073dedabdedd54ff547f2346ef1c1e06">ClassFileUtils::stream_to_cstring</a></div><div class="ttdeci">static const char * stream_to_cstring(const stringstream &amp;ss)</div><div class="ttdoc">Converte um objeto stringstream para uma string C (const char*).</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_a4cf48fa07867bd54b358eda3ba5c7a82"><div class="ttname"><a href="class_class_file_utils.html#a4cf48fa07867bd54b358eda3ba5c7a82">ClassFileUtils::compare_utf8_str</a></div><div class="ttdeci">static bool compare_utf8_str(ConstUtf8Info constant, const char *str)</div><div class="ttdoc">Compara uma string UTF-8 da Constant Pool com uma string C convencional.</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_a75e4c52e7183c258f07dd3ce7a9f2c68"><div class="ttname"><a href="class_class_file_utils.html#a75e4c52e7183c258f07dd3ce7a9f2c68">ClassFileUtils::display_indent</a></div><div class="ttdeci">static void display_indent(uint8_t n)</div><div class="ttdoc">(Possivelmente obsoleta) Imprime indentação na saída padrão.</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_a97095d53243fb4e5a3fce25a453e7a48"><div class="ttname"><a href="class_class_file_utils.html#a97095d53243fb4e5a3fce25a453e7a48">ClassFileUtils::file_indent</a></div><div class="ttdeci">static void file_indent(FILE *out, uint8_t n)</div><div class="ttdoc">Imprime uma indentação (espaços) no arquivo especificado.</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_aa1aba25198f0371e47f27a7f792a485f"><div class="ttname"><a href="class_class_file_utils.html#aa1aba25198f0371e47f27a7f792a485f">ClassFileUtils::verify_classfile_name</a></div><div class="ttdeci">static bool verify_classfile_name(string filename, string classname)</div><div class="ttdoc">Verifica se o nome do arquivo .class coincide com o nome da classe declarada.</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_acac6a19470342ef3fb613e71c10b42ec"><div class="ttname"><a href="class_class_file_utils.html#acac6a19470342ef3fb613e71c10b42ec">ClassFileUtils::non_suported_version</a></div><div class="ttdeci">static double non_suported_version(ClassFile *class_file)</div><div class="ttdoc">Verifica se a versão do .class não é suportada e retorna a versão numérica.</div></div>
+<div class="ttc" id="aclass_class_file_utils_html_aef3a16c04bd90f6ef363bfaece6fa12a"><div class="ttname"><a href="class_class_file_utils.html#aef3a16c04bd90f6ef363bfaece6fa12a">ClassFileUtils::return_version</a></div><div class="ttdeci">static double return_version(ClassFile *class_file)</div><div class="ttdoc">Retorna a versão da linguagem Java correspondente ao arquivo .class.</div></div>
+<div class="ttc" id="astruct_const_utf8_info_html"><div class="ttname"><a href="struct_const_utf8_info.html">ConstUtf8Info</a></div><div class="ttdoc">Informação de constante UTF8.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:259</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="_class_file_utils_8hpp.html">ClassFileUtils.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

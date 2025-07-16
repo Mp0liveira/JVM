@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Código-Fonte de headers/Frame.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_frame_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Frame.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_frame_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FRAME_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FRAME_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_base_type_8hpp.html">BaseType.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_instance_class_8hpp.html">InstanceClass.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_static_class_8hpp.html">StaticClass.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_frame.html">   26</a></span><span class="keyword">class </span><a class="code hl_function" href="class_frame.html#a7c19c94ce25df9578dd15a0f59c5bb0a">Frame</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_frame.html#a7c19c94ce25df9578dd15a0f59c5bb0a">   37</a></span>    <a class="code hl_function" href="class_frame.html#a7c19c94ce25df9578dd15a0f59c5bb0a">Frame</a>(<a class="code hl_class" href="class_instance_class.html">InstanceClass</a>* <span class="keywordtype">object</span>, <a class="code hl_class" href="class_static_class.html">StaticClass</a>* class_runtime, <span class="keywordtype">string</span> method_name, <span class="keywordtype">string</span> method_descriptor, vector&lt;Value&gt; arguments);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_frame.html#abaf9c2322ab906b058f9e1dd0cd1d224">   47</a></span>    <a class="code hl_function" href="class_frame.html#abaf9c2322ab906b058f9e1dd0cd1d224">Frame</a>(<a class="code hl_class" href="class_static_class.html">StaticClass</a>* class_runtime, <span class="keywordtype">string</span> method_name, <span class="keywordtype">string</span> method_descriptor, vector&lt;Value&gt; arguments = vector&lt;Value&gt;());</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_frame.html#abec8c7bccdfc88cb4da137caae9f73d6">   52</a></span>    <a class="code hl_function" href="class_frame.html#abec8c7bccdfc88cb4da137caae9f73d6">~Frame</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_frame.html#a7c3d5372d7c1a644e4ecf7f8a3067e74">   58</a></span>    <a class="code hl_struct" href="struct_constant_pool_info.html">ConstantPoolInfo</a>** <a class="code hl_function" href="class_frame.html#a7c3d5372d7c1a644e4ecf7f8a3067e74">get_constant_pool</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_frame.html#a9797de74ee225d1c0bcc495d9a4d281f">   65</a></span>    <a class="code hl_struct" href="struct_value.html">Value</a> <a class="code hl_function" href="class_frame.html#a9797de74ee225d1c0bcc495d9a4d281f">get_local_variable_value</a>(uint32_t index);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_frame.html#a59b2e5befc0744af0fb460cb5604cd77">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a59b2e5befc0744af0fb460cb5604cd77">set_local_variable</a>(<a class="code hl_struct" href="struct_value.html">Value</a> variableValue, uint32_t index);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_frame.html#a2acb682fdcf634a0fe71842f2350dba7">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a2acb682fdcf634a0fe71842f2350dba7">push_operand_stack</a>(<a class="code hl_struct" href="struct_value.html">Value</a> operand);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_frame.html#ad0de66ded47400267c137871ee3930ea">   84</a></span>    <a class="code hl_struct" href="struct_value.html">Value</a> <a class="code hl_function" href="class_frame.html#ad0de66ded47400267c137871ee3930ea">pop_operand_stack</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_frame.html#a01ca780a197293b06d4424501abf9fd5">   90</a></span>    stack&lt;Value&gt; <a class="code hl_function" href="class_frame.html#a01ca780a197293b06d4424501abf9fd5">copy_operand_stack</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_frame.html#a829eecd6abbb6573952d4f1fc48d1b8d">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a829eecd6abbb6573952d4f1fc48d1b8d">load_operand_stack</a>(stack&lt;Value&gt; backup);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_frame.html#a1c8159e0571226d317f1ff1cddc5626a">  102</a></span>    <a class="code hl_class" href="class_instance_class.html">InstanceClass</a>* <a class="code hl_function" href="class_frame.html#a1c8159e0571226d317f1ff1cddc5626a">get_object</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_frame.html#a809611d9de676537a9f6521da830b59e">  109</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#ad9f4cdb6757615aae2fad89dab3c5470">u1</a>* <a class="code hl_function" href="class_frame.html#a809611d9de676537a9f6521da830b59e">get_code</a>(uint32_t address);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_frame.html#ada6a6cf76d00cbadf43a86a686dd026c">  114</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a> <a class="code hl_variable" href="class_frame.html#ada6a6cf76d00cbadf43a86a686dd026c">pc</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_frame.html#a32d91d612a309702223f2a0293e36964">  120</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> <a class="code hl_function" href="class_frame.html#a32d91d612a309702223f2a0293e36964">get_local_variables_vector_size</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_frame.html#a5a46754ddee4a984014d4d8539ff55a8">  126</a></span>    <a class="code hl_typedef" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a> <a class="code hl_function" href="class_frame.html#a5a46754ddee4a984014d4d8539ff55a8">get_code_size</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_struct" href="struct_method_info.html">MethodInfo</a>* obterMethodNamed(<a class="code hl_class" href="class_static_class.html">StaticClass</a>* class_runtime, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; descriptor);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> encontrarAttributes();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <a class="code hl_class" href="class_static_class.html">StaticClass</a>* class_runtime;                </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_class" href="class_instance_class.html">InstanceClass</a>* object;                     </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_struct" href="struct_method_info.html">MethodInfo</a> method;                         </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_struct" href="struct_code_attribute.html">CodeAttribute</a>* code_attribute;             </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_struct" href="struct_exceptions_attribute.html">ExceptionsAttribute</a>* exceptions_attribute; </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    map&lt;uint32_t, Value&gt; local_variables;      </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    stack&lt;Value&gt; operand_stack;                </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>};</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif </span><span class="comment">// FRAME_HPP</span></div>
+<div class="ttc" id="a_base_type_8hpp_html"><div class="ttname"><a href="_base_type_8hpp.html">BaseType.hpp</a></div><div class="ttdoc">Define os tipos básicos e estruturas essenciais para a JVM.</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_a732cde1300aafb73b0ea6c2558a7a54f"><div class="ttname"><a href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a></div><div class="ttdeci">uint16_t u2</div><div class="ttdoc">Inteiro sem sinal de 16 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:21</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_ad9f4cdb6757615aae2fad89dab3c5470"><div class="ttname"><a href="_base_type_8hpp.html#ad9f4cdb6757615aae2fad89dab3c5470">u1</a></div><div class="ttdeci">uint8_t u1</div><div class="ttdoc">Inteiro sem sinal de 8 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:15</div></div>
+<div class="ttc" id="a_base_type_8hpp_html_ae5be1f726785414dd1b77d60df074c9d"><div class="ttname"><a href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a></div><div class="ttdeci">uint32_t u4</div><div class="ttdoc">Inteiro sem sinal de 32 bits.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:27</div></div>
+<div class="ttc" id="a_instance_class_8hpp_html"><div class="ttname"><a href="_instance_class_8hpp.html">InstanceClass.hpp</a></div><div class="ttdoc">Declara a classe InstanceClass, que representa uma instância de um objeto em Java.</div></div>
+<div class="ttc" id="a_static_class_8hpp_html"><div class="ttname"><a href="_static_class_8hpp.html">StaticClass.hpp</a></div><div class="ttdoc">Representa uma classe carregada na JVM, com suporte a campos estáticos.</div></div>
+<div class="ttc" id="aclass_frame_html_a01ca780a197293b06d4424501abf9fd5"><div class="ttname"><a href="class_frame.html#a01ca780a197293b06d4424501abf9fd5">Frame::copy_operand_stack</a></div><div class="ttdeci">stack&lt; Value &gt; copy_operand_stack()</div><div class="ttdoc">Retorna uma cópia da pilha de operandos atual.</div></div>
+<div class="ttc" id="aclass_frame_html_a1c8159e0571226d317f1ff1cddc5626a"><div class="ttname"><a href="class_frame.html#a1c8159e0571226d317f1ff1cddc5626a">Frame::get_object</a></div><div class="ttdeci">InstanceClass * get_object()</div><div class="ttdoc">Retorna o objeto associado ao frame (caso seja método de instância).</div></div>
+<div class="ttc" id="aclass_frame_html_a2acb682fdcf634a0fe71842f2350dba7"><div class="ttname"><a href="class_frame.html#a2acb682fdcf634a0fe71842f2350dba7">Frame::push_operand_stack</a></div><div class="ttdeci">void push_operand_stack(Value operand)</div><div class="ttdoc">Empilha um valor na pilha de operandos.</div></div>
+<div class="ttc" id="aclass_frame_html_a32d91d612a309702223f2a0293e36964"><div class="ttname"><a href="class_frame.html#a32d91d612a309702223f2a0293e36964">Frame::get_local_variables_vector_size</a></div><div class="ttdeci">u2 get_local_variables_vector_size()</div><div class="ttdoc">Retorna o número de variáveis locais alocadas no método.</div></div>
+<div class="ttc" id="aclass_frame_html_a59b2e5befc0744af0fb460cb5604cd77"><div class="ttname"><a href="class_frame.html#a59b2e5befc0744af0fb460cb5604cd77">Frame::set_local_variable</a></div><div class="ttdeci">void set_local_variable(Value variableValue, uint32_t index)</div><div class="ttdoc">Define o valor de uma variável local pelo índice.</div></div>
+<div class="ttc" id="aclass_frame_html_a5a46754ddee4a984014d4d8539ff55a8"><div class="ttname"><a href="class_frame.html#a5a46754ddee4a984014d4d8539ff55a8">Frame::get_code_size</a></div><div class="ttdeci">u4 get_code_size()</div><div class="ttdoc">Retorna o tamanho total do código (bytecode) do método.</div></div>
+<div class="ttc" id="aclass_frame_html_a7c19c94ce25df9578dd15a0f59c5bb0a"><div class="ttname"><a href="class_frame.html#a7c19c94ce25df9578dd15a0f59c5bb0a">Frame::Frame</a></div><div class="ttdeci">Frame(InstanceClass *object, StaticClass *class_runtime, string method_name, string method_descriptor, vector&lt; Value &gt; arguments)</div><div class="ttdoc">Construtor para métodos de instância.</div></div>
+<div class="ttc" id="aclass_frame_html_a7c3d5372d7c1a644e4ecf7f8a3067e74"><div class="ttname"><a href="class_frame.html#a7c3d5372d7c1a644e4ecf7f8a3067e74">Frame::get_constant_pool</a></div><div class="ttdeci">ConstantPoolInfo ** get_constant_pool()</div><div class="ttdoc">Retorna o pool de constantes da classe onde o método foi definido.</div></div>
+<div class="ttc" id="aclass_frame_html_a809611d9de676537a9f6521da830b59e"><div class="ttname"><a href="class_frame.html#a809611d9de676537a9f6521da830b59e">Frame::get_code</a></div><div class="ttdeci">u1 * get_code(uint32_t address)</div><div class="ttdoc">Retorna ponteiro para o bytecode do método a partir de um endereço.</div></div>
+<div class="ttc" id="aclass_frame_html_a829eecd6abbb6573952d4f1fc48d1b8d"><div class="ttname"><a href="class_frame.html#a829eecd6abbb6573952d4f1fc48d1b8d">Frame::load_operand_stack</a></div><div class="ttdeci">void load_operand_stack(stack&lt; Value &gt; backup)</div><div class="ttdoc">Restaura a pilha de operandos a partir de uma pilha de backup.</div></div>
+<div class="ttc" id="aclass_frame_html_a9797de74ee225d1c0bcc495d9a4d281f"><div class="ttname"><a href="class_frame.html#a9797de74ee225d1c0bcc495d9a4d281f">Frame::get_local_variable_value</a></div><div class="ttdeci">Value get_local_variable_value(uint32_t index)</div><div class="ttdoc">Obtém o valor de uma variável local pelo índice.</div></div>
+<div class="ttc" id="aclass_frame_html_abaf9c2322ab906b058f9e1dd0cd1d224"><div class="ttname"><a href="class_frame.html#abaf9c2322ab906b058f9e1dd0cd1d224">Frame::Frame</a></div><div class="ttdeci">Frame(StaticClass *class_runtime, string method_name, string method_descriptor, vector&lt; Value &gt; arguments=vector&lt; Value &gt;())</div><div class="ttdoc">Construtor para métodos estáticos.</div></div>
+<div class="ttc" id="aclass_frame_html_abec8c7bccdfc88cb4da137caae9f73d6"><div class="ttname"><a href="class_frame.html#abec8c7bccdfc88cb4da137caae9f73d6">Frame::~Frame</a></div><div class="ttdeci">~Frame()</div><div class="ttdoc">Destrutor do Frame.</div></div>
+<div class="ttc" id="aclass_frame_html_ad0de66ded47400267c137871ee3930ea"><div class="ttname"><a href="class_frame.html#ad0de66ded47400267c137871ee3930ea">Frame::pop_operand_stack</a></div><div class="ttdeci">Value pop_operand_stack()</div><div class="ttdoc">Remove e retorna o topo da pilha de operandos.</div></div>
+<div class="ttc" id="aclass_frame_html_ada6a6cf76d00cbadf43a86a686dd026c"><div class="ttname"><a href="class_frame.html#ada6a6cf76d00cbadf43a86a686dd026c">Frame::pc</a></div><div class="ttdeci">u4 pc</div><div class="ttdoc">Contador de programa (Program Counter), indica a instrução atual do método.</div><div class="ttdef"><b>Definição</b> Frame.hpp:114</div></div>
+<div class="ttc" id="aclass_instance_class_html"><div class="ttname"><a href="class_instance_class.html">InstanceClass</a></div><div class="ttdoc">Representa um objeto instanciado a partir de uma classe Java dentro da JVM.</div><div class="ttdef"><b>Definição</b> InstanceClass.hpp:26</div></div>
+<div class="ttc" id="aclass_static_class_html"><div class="ttname"><a href="class_static_class.html">StaticClass</a></div><div class="ttdef"><b>Definição</b> StaticClass.hpp:21</div></div>
+<div class="ttc" id="astruct_code_attribute_html"><div class="ttname"><a href="struct_code_attribute.html">CodeAttribute</a></div><div class="ttdoc">Atributo Code contendo o código bytecode do método.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:308</div></div>
+<div class="ttc" id="astruct_constant_pool_info_html"><div class="ttname"><a href="struct_constant_pool_info.html">ConstantPoolInfo</a></div><div class="ttdoc">Entrada genérica da constant pool.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:268</div></div>
+<div class="ttc" id="astruct_exceptions_attribute_html"><div class="ttname"><a href="struct_exceptions_attribute.html">ExceptionsAttribute</a></div><div class="ttdoc">Atributo Exceptions que lista exceções lançadas.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:323</div></div>
+<div class="ttc" id="astruct_method_info_html"><div class="ttname"><a href="struct_method_info.html">MethodInfo</a></div><div class="ttdoc">Representa um método de uma classe Java.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:142</div></div>
+<div class="ttc" id="astruct_value_html"><div class="ttname"><a href="struct_value.html">Value</a></div><div class="ttdoc">Declaração antecipada da classe Object.</div><div class="ttdef"><b>Definição</b> BaseType.hpp:65</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li><li class="navelem"><a href="_frame_8hpp.html">Frame.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

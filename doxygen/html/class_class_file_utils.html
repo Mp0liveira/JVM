@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Referência da Classe ClassFileUtils</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_class_file_utils.html','','class_class_file_utils-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência da Classe ClassFileUtils</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_class_file_utils_8hpp_source.html">ClassFileUtils.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Membros públicos estáticos</h2></td></tr>
+<tr class="memitem:aef3a16c04bd90f6ef363bfaece6fa12a" id="r_aef3a16c04bd90f6ef363bfaece6fa12a"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef3a16c04bd90f6ef363bfaece6fa12a">return_version</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:aef3a16c04bd90f6ef363bfaece6fa12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a versão da linguagem Java correspondente ao arquivo <span class="tt">.class</span>.  <br /></td></tr>
+<tr class="memitem:acac6a19470342ef3fb613e71c10b42ec" id="r_acac6a19470342ef3fb613e71c10b42ec"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acac6a19470342ef3fb613e71c10b42ec">non_suported_version</a> (<a class="el" href="class_class_file.html">ClassFile</a> *class_file)</td></tr>
+<tr class="memdesc:acac6a19470342ef3fb613e71c10b42ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a versão do <span class="tt">.class</span> não é suportada e retorna a versão numérica.  <br /></td></tr>
+<tr class="memitem:a4cf48fa07867bd54b358eda3ba5c7a82" id="r_a4cf48fa07867bd54b358eda3ba5c7a82"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cf48fa07867bd54b358eda3ba5c7a82">compare_utf8_str</a> (<a class="el" href="struct_const_utf8_info.html">ConstUtf8Info</a> constant, const char *str)</td></tr>
+<tr class="memdesc:a4cf48fa07867bd54b358eda3ba5c7a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara uma string UTF-8 da Constant Pool com uma string C convencional.  <br /></td></tr>
+<tr class="memitem:aa1aba25198f0371e47f27a7f792a485f" id="r_aa1aba25198f0371e47f27a7f792a485f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1aba25198f0371e47f27a7f792a485f">verify_classfile_name</a> (string filename, string classname)</td></tr>
+<tr class="memdesc:aa1aba25198f0371e47f27a7f792a485f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o nome do arquivo <span class="tt">.class</span> coincide com o nome da classe declarada.  <br /></td></tr>
+<tr class="memitem:a073dedabdedd54ff547f2346ef1c1e06" id="r_a073dedabdedd54ff547f2346ef1c1e06"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a073dedabdedd54ff547f2346ef1c1e06">stream_to_cstring</a> (const stringstream &amp;ss)</td></tr>
+<tr class="memdesc:a073dedabdedd54ff547f2346ef1c1e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converte um objeto stringstream para uma string C (<span class="tt">const char*</span>).  <br /></td></tr>
+<tr class="memitem:a97095d53243fb4e5a3fce25a453e7a48" id="r_a97095d53243fb4e5a3fce25a453e7a48"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97095d53243fb4e5a3fce25a453e7a48">file_indent</a> (FILE *out, uint8_t n)</td></tr>
+<tr class="memdesc:a97095d53243fb4e5a3fce25a453e7a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime uma indentação (espaços) no arquivo especificado.  <br /></td></tr>
+<tr class="memitem:a75e4c52e7183c258f07dd3ce7a9f2c68" id="r_a75e4c52e7183c258f07dd3ce7a9f2c68"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e4c52e7183c258f07dd3ce7a9f2c68">display_indent</a> (uint8_t n)</td></tr>
+<tr class="memdesc:a75e4c52e7183c258f07dd3ce7a9f2c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Possivelmente obsoleta) Imprime indentação na saída padrão.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="a4cf48fa07867bd54b358eda3ba5c7a82" name="a4cf48fa07867bd54b358eda3ba5c7a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf48fa07867bd54b358eda3ba5c7a82">&#9670;&#160;</a></span>compare_utf8_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClassFileUtils::compare_utf8_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_const_utf8_info.html">ConstUtf8Info</a></td>          <td class="paramname"><span class="paramname"><em>constant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compara uma string UTF-8 da Constant Pool com uma string C convencional. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">constant</td><td>Estrutura <a class="el" href="struct_const_utf8_info.html" title="Informação de constante UTF8.">ConstUtf8Info</a> a ser comparada. </td></tr>
+    <tr><td class="paramname">str</td><td>Ponteiro para string C que será comparada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se ambas as strings forem iguais. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="a75e4c52e7183c258f07dd3ce7a9f2c68" name="a75e4c52e7183c258f07dd3ce7a9f2c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e4c52e7183c258f07dd3ce7a9f2c68">&#9670;&#160;</a></span>display_indent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClassFileUtils::display_indent </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Possivelmente obsoleta) Imprime indentação na saída padrão. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Quantidade de espaços a serem impressos.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Observação</dt><dd>Esta função aparentemente não é utilizada e pode ser removida. </dd></dl>
+
+</div>
+</div>
+<a id="a97095d53243fb4e5a3fce25a453e7a48" name="a97095d53243fb4e5a3fce25a453e7a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97095d53243fb4e5a3fce25a453e7a48">&#9670;&#160;</a></span>file_indent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClassFileUtils::file_indent </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Imprime uma indentação (espaços) no arquivo especificado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Ponteiro para o arquivo de saída. </td></tr>
+    <tr><td class="paramname">n</td><td>Quantidade de espaços a serem impressos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acac6a19470342ef3fb613e71c10b42ec" name="acac6a19470342ef3fb613e71c10b42ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac6a19470342ef3fb613e71c10b42ec">&#9670;&#160;</a></span>non_suported_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ClassFileUtils::non_suported_version </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica se a versão do <span class="tt">.class</span> não é suportada e retorna a versão numérica. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>double Versão do Java não suportada.</dd></dl>
+<dl class="section note"><dt>Observação</dt><dd>Essa função pode ser usada para emitir mensagens de erro ou advertência. </dd></dl>
+
+</div>
+</div>
+<a id="aef3a16c04bd90f6ef363bfaece6fa12a" name="aef3a16c04bd90f6ef363bfaece6fa12a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3a16c04bd90f6ef363bfaece6fa12a">&#9670;&#160;</a></span>return_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ClassFileUtils::return_version </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_class_file.html">ClassFile</a> *</td>          <td class="paramname"><span class="paramname"><em>class_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna a versão da linguagem Java correspondente ao arquivo <span class="tt">.class</span>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_file</td><td>Ponteiro para a estrutura <a class="el" href="class_class_file.html" title="Representa a estrutura completa de um arquivo .class Java, contendo informações gerais,...">ClassFile</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>double Versão do Java (ex: 45.3, 52.0).</dd></dl>
+<dl class="section note"><dt>Observação</dt><dd>A versão é baseada nos valores <span class="tt">major_version</span> e <span class="tt">minor_version</span> do class_file. </dd></dl>
+
+</div>
+</div>
+<a id="a073dedabdedd54ff547f2346ef1c1e06" name="a073dedabdedd54ff547f2346ef1c1e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a073dedabdedd54ff547f2346ef1c1e06">&#9670;&#160;</a></span>stream_to_cstring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ClassFileUtils::stream_to_cstring </td>
+          <td>(</td>
+          <td class="paramtype">const stringstream &amp;</td>          <td class="paramname"><span class="paramname"><em>ss</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converte um objeto stringstream para uma string C (<span class="tt">const char*</span>). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ss</td><td>Referência para o stringstream de entrada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>const char* String resultante alocada dinamicamente.</dd></dl>
+<dl class="section warning"><dt>Aviso</dt><dd>A string retornada pode precisar ser liberada com <span class="tt">delete[]</span> para evitar vazamento de memória. </dd></dl>
+
+</div>
+</div>
+<a id="aa1aba25198f0371e47f27a7f792a485f" name="aa1aba25198f0371e47f27a7f792a485f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1aba25198f0371e47f27a7f792a485f">&#9670;&#160;</a></span>verify_classfile_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClassFileUtils::verify_classfile_name </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>classname</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica se o nome do arquivo <span class="tt">.class</span> coincide com o nome da classe declarada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo <span class="tt">.class</span>. </td></tr>
+    <tr><td class="paramname">classname</td><td>Nome da classe interna declarada no arquivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true Se os nomes coincidirem. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>headers/<a class="el" href="_class_file_utils_8hpp_source.html">ClassFileUtils.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_class_file_utils.html">ClassFileUtils</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

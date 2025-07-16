@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JVM: Referência da Classe Frame</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">JVM<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_frame.html','','class_frame-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência da Classe Frame</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Representa um frame da pilha de execução da JVM, armazenando variáveis locais, pilha de operandos e contexto do método.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_frame_8hpp_source.html">Frame.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a7c19c94ce25df9578dd15a0f59c5bb0a" id="r_a7c19c94ce25df9578dd15a0f59c5bb0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c19c94ce25df9578dd15a0f59c5bb0a">Frame</a> (<a class="el" href="class_instance_class.html">InstanceClass</a> *object, <a class="el" href="class_static_class.html">StaticClass</a> *class_runtime, string method_name, string method_descriptor, vector&lt; <a class="el" href="struct_value.html">Value</a> &gt; arguments)</td></tr>
+<tr class="memdesc:a7c19c94ce25df9578dd15a0f59c5bb0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor para métodos de instância.  <br /></td></tr>
+<tr class="memitem:abaf9c2322ab906b058f9e1dd0cd1d224" id="r_abaf9c2322ab906b058f9e1dd0cd1d224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf9c2322ab906b058f9e1dd0cd1d224">Frame</a> (<a class="el" href="class_static_class.html">StaticClass</a> *class_runtime, string method_name, string method_descriptor, vector&lt; <a class="el" href="struct_value.html">Value</a> &gt; arguments=vector&lt; <a class="el" href="struct_value.html">Value</a> &gt;())</td></tr>
+<tr class="memdesc:abaf9c2322ab906b058f9e1dd0cd1d224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor para métodos estáticos.  <br /></td></tr>
+<tr class="memitem:abec8c7bccdfc88cb4da137caae9f73d6" id="r_abec8c7bccdfc88cb4da137caae9f73d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abec8c7bccdfc88cb4da137caae9f73d6">~Frame</a> ()</td></tr>
+<tr class="memdesc:abec8c7bccdfc88cb4da137caae9f73d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor do <a class="el" href="class_frame.html" title="Representa um frame da pilha de execução da JVM, armazenando variáveis locais, pilha de operandos e c...">Frame</a>.  <br /></td></tr>
+<tr class="memitem:a7c3d5372d7c1a644e4ecf7f8a3067e74" id="r_a7c3d5372d7c1a644e4ecf7f8a3067e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c3d5372d7c1a644e4ecf7f8a3067e74">get_constant_pool</a> ()</td></tr>
+<tr class="memdesc:a7c3d5372d7c1a644e4ecf7f8a3067e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o pool de constantes da classe onde o método foi definido.  <br /></td></tr>
+<tr class="memitem:a9797de74ee225d1c0bcc495d9a4d281f" id="r_a9797de74ee225d1c0bcc495d9a4d281f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9797de74ee225d1c0bcc495d9a4d281f">get_local_variable_value</a> (uint32_t index)</td></tr>
+<tr class="memdesc:a9797de74ee225d1c0bcc495d9a4d281f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o valor de uma variável local pelo índice.  <br /></td></tr>
+<tr class="memitem:a59b2e5befc0744af0fb460cb5604cd77" id="r_a59b2e5befc0744af0fb460cb5604cd77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59b2e5befc0744af0fb460cb5604cd77">set_local_variable</a> (<a class="el" href="struct_value.html">Value</a> variableValue, uint32_t index)</td></tr>
+<tr class="memdesc:a59b2e5befc0744af0fb460cb5604cd77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o valor de uma variável local pelo índice.  <br /></td></tr>
+<tr class="memitem:a2acb682fdcf634a0fe71842f2350dba7" id="r_a2acb682fdcf634a0fe71842f2350dba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2acb682fdcf634a0fe71842f2350dba7">push_operand_stack</a> (<a class="el" href="struct_value.html">Value</a> operand)</td></tr>
+<tr class="memdesc:a2acb682fdcf634a0fe71842f2350dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empilha um valor na pilha de operandos.  <br /></td></tr>
+<tr class="memitem:ad0de66ded47400267c137871ee3930ea" id="r_ad0de66ded47400267c137871ee3930ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0de66ded47400267c137871ee3930ea">pop_operand_stack</a> ()</td></tr>
+<tr class="memdesc:ad0de66ded47400267c137871ee3930ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove e retorna o topo da pilha de operandos.  <br /></td></tr>
+<tr class="memitem:a01ca780a197293b06d4424501abf9fd5" id="r_a01ca780a197293b06d4424501abf9fd5"><td class="memItemLeft" align="right" valign="top">stack&lt; <a class="el" href="struct_value.html">Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01ca780a197293b06d4424501abf9fd5">copy_operand_stack</a> ()</td></tr>
+<tr class="memdesc:a01ca780a197293b06d4424501abf9fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma cópia da pilha de operandos atual.  <br /></td></tr>
+<tr class="memitem:a829eecd6abbb6573952d4f1fc48d1b8d" id="r_a829eecd6abbb6573952d4f1fc48d1b8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a829eecd6abbb6573952d4f1fc48d1b8d">load_operand_stack</a> (stack&lt; <a class="el" href="struct_value.html">Value</a> &gt; backup)</td></tr>
+<tr class="memdesc:a829eecd6abbb6573952d4f1fc48d1b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restaura a pilha de operandos a partir de uma pilha de backup.  <br /></td></tr>
+<tr class="memitem:a1c8159e0571226d317f1ff1cddc5626a" id="r_a1c8159e0571226d317f1ff1cddc5626a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_instance_class.html">InstanceClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c8159e0571226d317f1ff1cddc5626a">get_object</a> ()</td></tr>
+<tr class="memdesc:a1c8159e0571226d317f1ff1cddc5626a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o objeto associado ao frame (caso seja método de instância).  <br /></td></tr>
+<tr class="memitem:a809611d9de676537a9f6521da830b59e" id="r_a809611d9de676537a9f6521da830b59e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_base_type_8hpp.html#ad9f4cdb6757615aae2fad89dab3c5470">u1</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809611d9de676537a9f6521da830b59e">get_code</a> (uint32_t address)</td></tr>
+<tr class="memdesc:a809611d9de676537a9f6521da830b59e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna ponteiro para o bytecode do método a partir de um endereço.  <br /></td></tr>
+<tr class="memitem:a32d91d612a309702223f2a0293e36964" id="r_a32d91d612a309702223f2a0293e36964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32d91d612a309702223f2a0293e36964">get_local_variables_vector_size</a> ()</td></tr>
+<tr class="memdesc:a32d91d612a309702223f2a0293e36964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o número de variáveis locais alocadas no método.  <br /></td></tr>
+<tr class="memitem:a5a46754ddee4a984014d4d8539ff55a8" id="r_a5a46754ddee4a984014d4d8539ff55a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a46754ddee4a984014d4d8539ff55a8">get_code_size</a> ()</td></tr>
+<tr class="memdesc:a5a46754ddee4a984014d4d8539ff55a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tamanho total do código (bytecode) do método.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:ada6a6cf76d00cbadf43a86a686dd026c" id="r_ada6a6cf76d00cbadf43a86a686dd026c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6a6cf76d00cbadf43a86a686dd026c">pc</a></td></tr>
+<tr class="memdesc:ada6a6cf76d00cbadf43a86a686dd026c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contador de programa (Program Counter), indica a instrução atual do método.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Representa um frame da pilha de execução da JVM, armazenando variáveis locais, pilha de operandos e contexto do método. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Construtores e Destrutores</h2>
+<a id="a7c19c94ce25df9578dd15a0f59c5bb0a" name="a7c19c94ce25df9578dd15a0f59c5bb0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c19c94ce25df9578dd15a0f59c5bb0a">&#9670;&#160;</a></span>Frame() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Frame::Frame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_instance_class.html">InstanceClass</a> *</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_static_class.html">StaticClass</a> *</td>          <td class="paramname"><span class="paramname"><em>class_runtime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>method_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>method_descriptor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="struct_value.html">Value</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>arguments</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor para métodos de instância. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>Ponteiro para o objeto da instância (<span class="tt">this</span>). </td></tr>
+    <tr><td class="paramname">class_runtime</td><td>Classe onde o método foi definido. </td></tr>
+    <tr><td class="paramname">method_name</td><td>Nome do método. </td></tr>
+    <tr><td class="paramname">method_descriptor</td><td>Descritor do método (tipo dos parâmetros e retorno). </td></tr>
+    <tr><td class="paramname">arguments</td><td>Vetor com os argumentos para o método. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abaf9c2322ab906b058f9e1dd0cd1d224" name="abaf9c2322ab906b058f9e1dd0cd1d224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf9c2322ab906b058f9e1dd0cd1d224">&#9670;&#160;</a></span>Frame() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Frame::Frame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_static_class.html">StaticClass</a> *</td>          <td class="paramname"><span class="paramname"><em>class_runtime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>method_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>method_descriptor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="struct_value.html">Value</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>arguments</em></span><span class="paramdefsep"> = </span><span class="paramdefval">vector&lt;&#160;<a class="el" href="struct_value.html">Value</a>&#160;&gt;()</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor para métodos estáticos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_runtime</td><td>Classe onde o método foi definido. </td></tr>
+    <tr><td class="paramname">method_name</td><td>Nome do método. </td></tr>
+    <tr><td class="paramname">method_descriptor</td><td>Descritor do método. </td></tr>
+    <tr><td class="paramname">arguments</td><td>Vetor de argumentos (opcional). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abec8c7bccdfc88cb4da137caae9f73d6" name="abec8c7bccdfc88cb4da137caae9f73d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec8c7bccdfc88cb4da137caae9f73d6">&#9670;&#160;</a></span>~Frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Frame::~Frame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor do <a class="el" href="class_frame.html" title="Representa um frame da pilha de execução da JVM, armazenando variáveis locais, pilha de operandos e c...">Frame</a>. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="a01ca780a197293b06d4424501abf9fd5" name="a01ca780a197293b06d4424501abf9fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ca780a197293b06d4424501abf9fd5">&#9670;&#160;</a></span>copy_operand_stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">stack&lt; <a class="el" href="struct_value.html">Value</a> &gt; Frame::copy_operand_stack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna uma cópia da pilha de operandos atual. </p>
+<dl class="section return"><dt>Retorna</dt><dd>stack&lt;Value&gt; Pilha copiada. </dd></dl>
+
+</div>
+</div>
+<a id="a809611d9de676537a9f6521da830b59e" name="a809611d9de676537a9f6521da830b59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809611d9de676537a9f6521da830b59e">&#9670;&#160;</a></span>get_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_base_type_8hpp.html#ad9f4cdb6757615aae2fad89dab3c5470">u1</a> * Frame::get_code </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna ponteiro para o bytecode do método a partir de um endereço. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>Posição relativa do bytecode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>u1* Ponteiro para o bytecode. </dd></dl>
+
+</div>
+</div>
+<a id="a5a46754ddee4a984014d4d8539ff55a8" name="a5a46754ddee4a984014d4d8539ff55a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a46754ddee4a984014d4d8539ff55a8">&#9670;&#160;</a></span>get_code_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a> Frame::get_code_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tamanho total do código (bytecode) do método. </p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d" title="Inteiro sem sinal de 32 bits.">u4</a> Tamanho do código em bytes. </dd></dl>
+
+</div>
+</div>
+<a id="a7c3d5372d7c1a644e4ecf7f8a3067e74" name="a7c3d5372d7c1a644e4ecf7f8a3067e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3d5372d7c1a644e4ecf7f8a3067e74">&#9670;&#160;</a></span>get_constant_pool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_constant_pool_info.html">ConstantPoolInfo</a> ** Frame::get_constant_pool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o pool de constantes da classe onde o método foi definido. </p>
+<dl class="section return"><dt>Retorna</dt><dd>ConstantPoolInfo** Ponteiro para o pool de constantes. </dd></dl>
+
+</div>
+</div>
+<a id="a9797de74ee225d1c0bcc495d9a4d281f" name="a9797de74ee225d1c0bcc495d9a4d281f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9797de74ee225d1c0bcc495d9a4d281f">&#9670;&#160;</a></span>get_local_variable_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_value.html">Value</a> Frame::get_local_variable_value </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o valor de uma variável local pelo índice. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Índice da variável. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="struct_value.html" title="Declaração antecipada da classe Object.">Value</a> Valor armazenado. </dd></dl>
+
+</div>
+</div>
+<a id="a32d91d612a309702223f2a0293e36964" name="a32d91d612a309702223f2a0293e36964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d91d612a309702223f2a0293e36964">&#9670;&#160;</a></span>get_local_variables_vector_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f">u2</a> Frame::get_local_variables_vector_size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o número de variáveis locais alocadas no método. </p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="_base_type_8hpp.html#a732cde1300aafb73b0ea6c2558a7a54f" title="Inteiro sem sinal de 16 bits.">u2</a> Tamanho do vetor de variáveis locais. </dd></dl>
+
+</div>
+</div>
+<a id="a1c8159e0571226d317f1ff1cddc5626a" name="a1c8159e0571226d317f1ff1cddc5626a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8159e0571226d317f1ff1cddc5626a">&#9670;&#160;</a></span>get_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_instance_class.html">InstanceClass</a> * Frame::get_object </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o objeto associado ao frame (caso seja método de instância). </p>
+<dl class="section return"><dt>Retorna</dt><dd>InstanceClass* Ponteiro para o objeto. </dd></dl>
+
+</div>
+</div>
+<a id="a829eecd6abbb6573952d4f1fc48d1b8d" name="a829eecd6abbb6573952d4f1fc48d1b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829eecd6abbb6573952d4f1fc48d1b8d">&#9670;&#160;</a></span>load_operand_stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Frame::load_operand_stack </td>
+          <td>(</td>
+          <td class="paramtype">stack&lt; <a class="el" href="struct_value.html">Value</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>backup</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restaura a pilha de operandos a partir de uma pilha de backup. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">backup</td><td>Pilha de operandos a ser restaurada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad0de66ded47400267c137871ee3930ea" name="ad0de66ded47400267c137871ee3930ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0de66ded47400267c137871ee3930ea">&#9670;&#160;</a></span>pop_operand_stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_value.html">Value</a> Frame::pop_operand_stack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove e retorna o topo da pilha de operandos. </p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="struct_value.html" title="Declaração antecipada da classe Object.">Value</a> Valor desempilhado. </dd></dl>
+
+</div>
+</div>
+<a id="a2acb682fdcf634a0fe71842f2350dba7" name="a2acb682fdcf634a0fe71842f2350dba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acb682fdcf634a0fe71842f2350dba7">&#9670;&#160;</a></span>push_operand_stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Frame::push_operand_stack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_value.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>operand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Empilha um valor na pilha de operandos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operand</td><td>Valor a ser empilhado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59b2e5befc0744af0fb460cb5604cd77" name="a59b2e5befc0744af0fb460cb5604cd77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b2e5befc0744af0fb460cb5604cd77">&#9670;&#160;</a></span>set_local_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Frame::set_local_variable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_value.html">Value</a></td>          <td class="paramname"><span class="paramname"><em>variableValue</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define o valor de uma variável local pelo índice. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variableValue</td><td>Valor a ser definido. </td></tr>
+    <tr><td class="paramname">index</td><td>Índice da variável. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Atributos</h2>
+<a id="ada6a6cf76d00cbadf43a86a686dd026c" name="ada6a6cf76d00cbadf43a86a686dd026c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6a6cf76d00cbadf43a86a686dd026c">&#9670;&#160;</a></span>pc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_base_type_8hpp.html#ae5be1f726785414dd1b77d60df074c9d">u4</a> Frame::pc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contador de programa (Program Counter), indica a instrução atual do método. </p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>headers/<a class="el" href="_frame_8hpp_source.html">Frame.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_frame.html">Frame</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
