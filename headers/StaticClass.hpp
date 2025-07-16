@@ -8,33 +8,61 @@
 
 using namespace std;
 
+/**
+ * @class StaticClass
+ * @brief Representa uma classe carregada na JVM, com suporte a campos estáticos.
+ *
+ * Armazena e gerencia os dados de uma classe Java carregada, incluindo o acesso
+ * aos seus campos estáticos e à estrutura `ClassFile` correspondente.
+ */
 class StaticClass {
-
 public:
-    // Conta com um ponteiro para o ClassFile que contém os dados da classe
+    /**
+     * @brief Construtor que inicializa a StaticClass com um ponteiro para ClassFile.
+     * @param class_file Ponteiro para a estrutura ClassFile carregada.
+     */
     StaticClass(ClassFile* class_file);
 
-    // Retorna o ponteiro para o ClasseFile que foi passado no método construtor
+    /**
+     * @brief Retorna o ponteiro para o ClassFile associado.
+     * @return Ponteiro para a estrutura ClassFile.
+     */
     ClassFile* get_class_file();
 
-    // Altera o valor de um static field
-    void insert_value(const Value &value, const string& field_name); // insert_value_into_field
+    /**
+     * @brief Insere ou atualiza o valor de um campo estático.
+     * @param value Valor a ser armazenado.
+     * @param field_name Nome do campo estático.
+     */
+    void insert_value(const Value& value, const string& field_name);
 
-    // Acessa o valor de um static field
-    Value get_value(const string& field_name); // get_value_from_field
+    /**
+     * @brief Retorna o valor associado a um campo estático.
+     * @param field_name Nome do campo.
+     * @return Valor armazenado.
+     */
+    Value get_value(const string& field_name);
 
-    // Verifica se um static field em específico existe
-    bool check_field(const string& field_name);  // field_exists
+    /**
+     * @brief Verifica se um campo estático com o nome especificado existe.
+     * @param field_name Nome do campo.
+     * @return true se o campo existir, false caso contrário.
+     */
+    bool check_field(const string& field_name);
 
-    // Inicializa os blocos de inicialização estáticas (clinit)
+    /**
+     * @brief Inicializa o bloco `<clinit>` da classe, se existir.
+     * @param argv Argumentos da linha de comando (opcionalmente usados).
+     * @return Nome do método `<clinit>` executado, ou string vazia se não houver.
+     */
     string initialize_file(char* argv[]);
 
 private:
-    // ClassFile a ser acessado
+    /// Ponteiro para a estrutura ClassFile que representa esta classe.
     ClassFile* class_file;
 
-    // Nomes e valores dos static fields
+    /// Mapa que armazena os valores dos campos estáticos (por nome).
     map<string, Value> static_fields;
 };
 
-#endif
+#endif // STATIC_CLASS_HPP
