@@ -1,56 +1,42 @@
-# 1. Compilador C++
-CC = g++
-
-# 2. Flags do Compilador C++
-CXXFLAGS = -std=c++11 -Wall -g
-
-# 3. Diretórios do Projeto
-SRC_DIR = src
-OBJ_DIR = build
-HDR_DIR = headers
+CC:=g++
+INCDIRS:=headers
+OPT:=-O0
+DEBUG:=-g
+LIBS:=
+CFLAGS:=-Wall -fdiagnostics-color=always $(OPT) $(foreach D,$(INCDIRS),-I$(D))
 
 
-# 5. Busca automática por arquivos fonte (.cpp) e cabeçalhos (.hpp)
-SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
-HEADERS = $(wildcard $(HDR_DIR)/*.hpp)
-OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SOURCES))
+ODIR=obj
+CDIR=src
+DEPDIR=dep
 
-# Adiciona o diretório de headers ao caminho de inclusão do compilador
-CXXFLAGS += -I$(HDR_DIR)
 
-# "Phony" targets não representam arquivos reais
-.PHONY: all clean cppcheck valgrind run
+CFILES=$(foreach D,$(CDIR),$(wildcard $(D)/*.cpp))
+OBJECTS=$(patsubst %.cpp, $(ODIR)/%.o, $(notdir $(CFILES)))
+INCLUDES=$(foreach D,$(INCDIRS), $(shell find $(D) -type f -name "*"))
 
-# Regra padrão: compilar tudo
-all: $(TARGET)
+BINARY=bin
 
-# 6. Regra para linkar os objetos e criar o executável final
-#    $@ é o nome do alvo (TARGET)
-#    $^ são todas as dependências (OBJECTS)
-$(TARGET): $(OBJECTS)
-	$(CC) $(CXXFLAGS) -o $@ $^
+debug: CFLAGS += $(DEBUG)
+debug: all
 
-# 7. Regra para compilar cada arquivo .cpp em um arquivo .o
-#    Depende do .cpp correspondente e de TODOS os arquivos de cabeçalho
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
-	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CXXFLAGS) -c $< -o $@
+all: | $(ODIR) $(BINARY) 
 
-# Regra para executar o programa
-run: all
-	./$(TARGET)
+$(ODIR):
+	mkdir -p $@
 
-# Regra do cppcheck atualizada para C++
-cppcheck:
-	cppcheck --enable=all --std=c++17 --language=c++ --inconclusive --quiet --force \
-		-I$(HDR_DIR) $(SRC_DIR)
+$(BINARY): $(OBJECTS)
+	$(CC) -o $@ $^ $(LIBS)
 
-# Regra do valgrind
-valgrind: all
-	valgrind --leak-check=full --track-origins=yes ./$(TARGET)
+$(ODIR)/%.o: $(CDIR)/%.cpp $(INCLUDES)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
-# Regra para limpar os arquivos gerados
 clean:
-	@echo "Limpando arquivos gerados..."
-	@rm -rf $(OBJ_DIR) $(TARGET)
-	@echo "Limpeza concluída."
+	@rm -rvf $(BINARY) $(ODIR)/*.o
+
+run: all
+	./$(BINARY)
+
+
+.PHONY: clean run all
+

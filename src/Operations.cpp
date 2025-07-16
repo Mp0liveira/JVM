@@ -3586,6 +3586,7 @@ void Operations::invokevirtual()
     top_frame->pc += 3;
 }
 
+
 void Operations::invokespecial()
 {
     Stack& stack_frame = Stack::get_instance();
