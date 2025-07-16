@@ -7,31 +7,60 @@
 
 using namespace std;
 
-// Classe que representa um objeto String da linguagem Java dentro da JVM
-// Essa classe herda da classe base Object e modela strings imutáveis
-class StrObject : public Object {
+/**
+ * @file StrObject.hpp
+ * @brief Declara a classe StrObject que representa um objeto `String` da linguagem Java.
+ */
 
+/**
+ * @class StrObject
+ * @brief Representa um objeto do tipo `String` da linguagem Java dentro da JVM.
+ * 
+ * Esta classe herda de `Object` e modela o comportamento imutável das strings em Java.
+ */
+class StrObject : public Object {
 public:
-    // Construtor que inicializa o objeto com uma string (opcional)
-    // Caso nenhuma string seja passada, o valor padrão é uma string vazia
+    /**
+     * @brief Construtor que inicializa o objeto com uma string opcional.
+     * 
+     * @param s Valor inicial da string (padrão: string vazia).
+     */
     StrObject(string s = "");
 
-    // Destrutor (não faz nada especial, pois a string será limpa automaticamente)
+    /**
+     * @brief Destrutor da classe.
+     * 
+     * O destrutor não realiza nenhuma liberação especial, pois `std::string` lida com seus próprios recursos.
+     */
     ~StrObject();
 
-    // Retorna o tipo do objeto (no caso, indica que é uma string)
-    // Útil para fazer verificações de tipo na JVM
+    /**
+     * @brief Retorna o tipo do objeto.
+     * 
+     * Este método identifica o objeto como sendo do tipo string, o que pode ser útil para verificações dinâmicas na JVM.
+     * 
+     * @return ObjectType Enum que representa o tipo do objeto.
+     */
     ObjectType object_type();
 
-    // Retorna o conteúdo atual da string armazenada
+    /**
+     * @brief Retorna o conteúdo atual da string armazenada.
+     * @return string A string interna do objeto.
+     */
     string get_str();
 
-    // Define ou atualiza o valor da string armazenada
+    /**
+     * @brief Define ou atualiza o valor da string armazenada.
+     * 
+     * @param s Novo valor para a string.
+     */
     void set_str(string s);
 
 private:
-    // Armazena internamente o valor da string (conteúdo do objeto Java String)
+    /**
+     * @brief Armazena internamente o conteúdo do objeto Java String.
+     */
     string internal_str;
 };
 
-#endif
+#endif // STR_OBJECT_HPP

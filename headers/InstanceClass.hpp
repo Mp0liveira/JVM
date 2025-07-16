@@ -11,33 +11,78 @@
 
 using namespace std;
 
+/**
+ * @file InstanceClass.hpp
+ * @brief Declara a classe InstanceClass, que representa uma instância de um objeto em Java.
+ */
+
+/**
+ * @class InstanceClass
+ * @brief Representa um objeto instanciado a partir de uma classe Java dentro da JVM.
+ * 
+ * Herda de `Object`, armazenando os fields da instância e mantendo referência à `StaticClass`
+ * que define o layout e comportamento da classe.
+ */
 class InstanceClass : public Object {
 
 public:
-
+    /**
+     * @brief Construtor que inicializa a instância com a classe estática correspondente.
+     * @param class_runtime Ponteiro para a definição da classe (`StaticClass*`).
+     */
     InstanceClass(StaticClass* class_runtime);
 
+    /**
+     * @brief Destrutor da instância.
+     */
     ~InstanceClass();
 
-    // O objecttype que representa a instância
+    /**
+     * @brief Retorna o tipo do objeto (`INSTANCE_CLASS`).
+     * @return Enum `ObjectType` representando o tipo da instância.
+     */
     ObjectType object_type();
 
-    // Retorna static class associada a está instância
+    /**
+     * @brief Retorna o ponteiro para a `StaticClass` associada a esta instância.
+     * @return Ponteiro para a `StaticClass` correspondente.
+     */
     StaticClass* get_class_runtime();
 
-    // Inserve um valor em um instance field
+    /**
+     * @brief Insere ou atualiza o valor de um campo de instância.
+     * 
+     * @param value Valor a ser inserido.
+     * @param field_name Nome do campo.
+     */
     void insert_value(Value value, const string& field_name);
 
-    // Retorna o valor de um field
+    /**
+     * @brief Recupera o valor de um campo de instância.
+     * 
+     * @param field_name Nome do campo desejado.
+     * @return Valor armazenado no campo.
+     */
     Value get_value(const string& field_name);
 
-    // Verifica se o field existe
+    /**
+     * @brief Verifica se um campo de instância existe.
+     * 
+     * @param field_name Nome do campo.
+     * @return `true` se o campo existe, `false` caso contrário.
+     */
     bool check_field(const string& field_name);
 
 private:
-    StaticClass* class_runtime; ///< Pointer to the class definition (StaticClass).
+    /**
+     * @brief Ponteiro para a definição da classe estática (`StaticClass`).
+     */
+    StaticClass* class_runtime;
 
-    map<string, Value> class_fields; ///< Storage for instance fields.
+    /**
+     * @brief Mapa que armazena os fields da instância (`nome → valor`).
+     */
+    map<string, Value> class_fields;
 };
 
 #endif // INSTANCE_CLASS_HPP

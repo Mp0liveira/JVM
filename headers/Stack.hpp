@@ -8,44 +8,90 @@
 
 using namespace std;
 
-// Define o número máximo de frames permitido na pilha (limitado na implementação)
+/**
+ * @file Stack.hpp
+ * @brief Declara a classe Stack, que representa a pilha de chamadas da JVM.
+ */
+
+/**
+ * @def FRAME_MAX_SIZE
+ * @brief Define o número máximo de frames permitido na pilha de chamadas.
+ * 
+ * Este valor é fixado na implementação como uma limitação prática.
+ */
 #define FRAME_MAX_SIZE 50
 
-// Classe Singleton que representa a pilha de chamadas da JVM
+/**
+ * @class Stack
+ * @brief Representa a pilha de chamadas da JVM como uma classe Singleton.
+ * 
+ * A pilha armazena os frames de execução (um para cada chamada de método).
+ * Cada frame mantém suas próprias variáveis locais e pilha de operandos.
+ */
 class Stack {
 public:
-    // Retorna a instância única da Stack (Singleton)
+    /**
+     * @brief Retorna a instância única da pilha (Singleton).
+     * @return Stack& Referência para a instância da pilha.
+     */
     static Stack& get_instance()
     {
         static Stack instance;
         return instance;
     }
 
-    // Destrutor: limpa recursos da pilha
+    /**
+     * @brief Destrutor da pilha.
+     * 
+     * Libera os recursos (frames) alocados dinamicamente.
+     */
     ~Stack();
 
-    // Empilha um novo frame na pilha de chamadas
+    /**
+     * @brief Empilha um novo frame na pilha de chamadas.
+     * @param frame Ponteiro para o frame a ser empilhado.
+     */
     void push_frame(Frame* frame);
 
-    // Retorna o frame no topo da pilha (frame atual)
+    /**
+     * @brief Retorna o frame no topo da pilha (frame atual).
+     * @return Frame* Ponteiro para o frame atual.
+     */
     Frame* get_top_frame();
 
-    // Remove o frame do topo da pilha e retorna se a operação foi bem-sucedida
+    /**
+     * @brief Remove o frame do topo da pilha.
+     * @return true Se a operação foi bem-sucedida.
+     * @return false Se a pilha já estiver vazia.
+     */
     bool pop_frame();
 
-    // Retorna o número atual de frames na pilha
+    /**
+     * @brief Retorna o número atual de frames na pilha.
+     * @return uint32_t Quantidade de frames.
+     */
     uint32_t size();
 
 private:
-    // Construtor privado para implementar o padrão Singleton
+    /**
+     * @brief Construtor privado (Singleton).
+     */
     Stack();
 
-    // Construtor de cópia desativado
+    /**
+     * @brief Construtor de cópia desativado (Singleton).
+     */
     Stack(Stack const&);
 
-    // Operador de atribuição desativado
+    /**
+     * @brief Operador de atribuição desativado (Singleton).
+     */
     void operator=(Stack const&);
 
-    // Container que armazena os ponteiros dos Frames da pilha
+    /**
+     * @brief Container que armazena os ponteiros dos frames da pilha.
+     */
     stack<Frame*> frame_stack;
 };
+
+#endif // STACK_HPP
